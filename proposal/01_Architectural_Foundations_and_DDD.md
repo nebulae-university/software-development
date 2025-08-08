@@ -1,0 +1,54 @@
+# Path 1: Fundamentos de Arquitectura de Microservicios y DDD
+
+## Objetivo del Path
+
+Este path está diseñado para que el desarrollador internalice los principios de diseño y los patrones arquitectónicos que guían la creación de software robusto, escalable y alineado con las necesidades del negocio en NebulaE. Al finalizar, el desarrollador podrá descomponer un sistema en microservicios, diseñarlos siguiendo los principios de DDD y aplicar los patrones de comunicación, datos y despliegue más importantes.
+
+## Plan de Estudios
+
+El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fundamentos de DDD hasta los patrones de comunicación y consistencia en arquitecturas de microservicios.
+
+---
+
+### Semana 1: Fundamentos de Domain-Driven Design (DDD)
+
+*   **Objetivo:** Comprender la filosofía de DDD, su importancia para el negocio y dominar los conceptos del diseño estratégico como el Lenguaje Ubicuo, los Contextos Delimitados y la organización de equipos.
+*   **Lecturas y Videos:**
+    *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h) - Lectura fundamental sobre cómo usar el análisis de dominio para modelar y definir los límites de los microservicios.
+    *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h) - Explica cómo la estructura de los equipos influye en la arquitectura y promueve la autonomía.
+    *   [Video: The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h) - Charla fundamental para aprender a identificar los límites de los contextos de negocio.
+
+### Semana 2: Patrones Tácticos de DDD y Aislamiento de Datos
+
+*   **Objetivo:** Diseñar el interior de un microservicio, modelando su lógica de negocio con los patrones tácticos de DDD y garantizando la encapsulación y persistencia de sus datos.
+*   **Lecturas y Videos:**
+    *   [Identificando los bloques de construcción de DDD (Microsoft Docs)](https://docs.microsoft.com/es-es/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model) (2h) - Una guía detallada que cubre Entidades, Objetos de Valor y, fundamentalmente, el patrón Agregado.
+    *   [Patrón: Base de Datos por Servicio (microservices.io)](https://microservices.io/patterns/data/database-per-service.html) (1h) - Explica por qué cada servicio debe tener su propia base de datos para asegurar un bajo acoplamiento.
+    *   [Video: Dissecting Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=zkRfDw0N4W8) (1h) - Charla avanzada sobre los diferentes tipos de contextos, sus relaciones y patrones de evolución.
+
+### Semana 3: Implementando DDD con CQRS y Event Sourcing
+
+*   **Objetivo:** Entender cómo los patrones CQRS y Event Sourcing sirven como mecanismos para implementar una arquitectura DDD, permitiendo la comunicación y la persistencia basada en eventos.
+*   **Lecturas y Videos:**
+    *   [Patrón CQRS (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/patterns/cqrs) (1h) - Describe en detalle el patrón de segregación de comandos y consultas.
+    *   [Patrón Event Sourcing (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/patterns/event-sourcing) (1.5h) - Introduce el concepto de persistir el estado de una aplicación como una secuencia inmutable de eventos.
+    *   [Patrón: Consumidor Idempotente (microservices.io)](https://microservices.io/patterns/communication-style/idempotent-consumer.html) (1h) - Un patrón crucial para evitar el procesamiento duplicado de mensajes en sistemas de comunicación asíncrona.
+    *   [Video: DDD, Event Sourcing & CQRS - Teoría y Práctica (YouTube)](https://www.youtube.com/watch?v=rolfJR9ERxo) (1h) - Un recurso visual que conecta la teoría de los tres patrones y muestra su aplicación práctica.
+
+### Semana 4: Exposición de APIs y Aceleración del Desarrollo
+
+*   **Objetivo:** Aprender a exponer los servicios al mundo exterior de forma segura y a utilizar patrones que aceleran y estandarizan el desarrollo.
+*   **Lecturas:**
+    *   [Patrón: API Gateway (microservices.io)](https://microservices.io/patterns/apigateway.html) (1.5h) - Explica cómo un API Gateway puede actuar como punto de entrada único, simplificando la comunicación y la seguridad.
+    *   [Patrón: Token de Acceso (microservices.io)](https://microservices.io/patterns/security/access-token.html) (1h) - Describe cómo propagar la identidad del usuario de forma segura a través de las llamadas a los servicios.
+    *   [Patrón: Microservice Chassis (microservices.io)](https://microservices.io/patterns/microservice-chassis.html) (1h) - Describe cómo crear un framework base con funcionalidades transversales como logging, métricas y configuración.
+    *   [Patrón: Plantilla de Servicio (microservices.io)](https://microservices.io/patterns/service-template.html) (1h) - Presenta una forma de estandarizar y acelerar la creación de nuevos servicios a partir de una base predefinida.
+
+### Semana 5: Despliegue, Consistencia y Composición de UI
+
+*   **Objetivo:** Aprender a empaquetar y desplegar servicios, gestionar la consistencia de datos a través de ellos con Sagas y componer interfaces de usuario a partir de múltiples servicios.
+*   **Lecturas:**
+    *   [Patrón: Servicio por Contenedor (microservices.io)](https://microservices.io/patterns/deployment/service-per-container.html) (1.5h) - Explica los beneficios de desplegar cada instancia de servicio en su propio contenedor.
+    *   [Patrón Saga (microservices.io)](https://microservices.io/patterns/data/saga.html) (1.5h) - Una guía completa sobre cómo gestionar la consistencia de datos a través de servicios sin transacciones distribuidas.
+    *   [Patrón Saga (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/patterns/saga) (1h) - Documentación oficial de Microsoft sobre el patrón Saga.
+    *   [Patrón: Composición de Fragmentos de UI en el Servidor (microservices.io)](https://microservices.io/patterns/ui/server-side-page-fragment-composition.html) (1h) - Muestra una técnica para construir interfaces de usuario complejas a partir de fragmentos generados por diferentes microservicios.
