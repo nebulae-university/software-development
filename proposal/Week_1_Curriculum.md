@@ -38,7 +38,15 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 1: Fundamentos de Domain-Driven Design (Path 1)
 *   **Objetivo:** Comprender la filosofía de DDD, su importancia para el negocio y los conceptos del diseño estratégico.
-*   **Descripción:** Introducción a los fundamentos de Domain-Driven Design, enfocándose en cómo DDD guía la creación de software alineado con las necesidades del negocio. Se explorarán los conceptos de Lenguaje Ubicuo y su importancia en la comunicación entre equipos técnicos y de negocio.
+*   **Descripción:** Este módulo introduce los fundamentos de Domain-Driven Design (DDD), una metodología crucial para construir software que está verdaderamente alineado con las metas del negocio. El objetivo es que dejes de pensar solo en tecnología y comiences a modelar el dominio del negocio.
+
+    Para ello, empezarás leyendo el material de **Microsoft Docs sobre análisis de dominio**, que te enseñará a descomponer un sistema complejo en partes más manejables, identificando los "subdominios" del negocio. Este es el primer paso para definir microservicios. El concepto clave aquí es el **Bounded Context (Contexto Delimitado)**, que es la frontera que define dónde un modelo de software específico tiene sentido.
+
+    Luego, el artículo de **microservices.io sobre "Servicio por Equipo"** te mostrará cómo la estructura de tus equipos de desarrollo (la Ley de Conway) impacta directamente la arquitectura de tu software. Aprenderás por qué es vital que equipos pequeños y autónomos sean dueños de servicios específicos para fomentar la agilidad y la responsabilidad.
+
+    Los videos complementan esta base teórica. El video de **Nick Tune sobre Bounded Contexts** te dará una visión práctica de cómo "descubrir" estos límites en un negocio real. Los videos sobre **arquitecturas Limpia, Hexagonal y de Cebolla** te introducirán a patrones que promueven el desacoplamiento y la testeabilidad, principios clave en DDD. Finalmente, los videos cortos sobre **Microservicios vs. Monolitos**, la **Ley de Conway** y los **Límites y Encapsulamiento** reforzarán de manera visual y concisa por qué estamos adoptando esta filosofía en NebulaE.
+
+    Al final de este módulo, deberás ser capaz de explicar qué es el **Lenguaje Ubicuo** (un lenguaje compartido entre desarrolladores y expertos del dominio) y cómo los **Contextos Delimitados** ayudan a organizar tanto el código como los equipos.
 *   **Recursos Web:**
     *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h)
     *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h)
@@ -52,7 +60,15 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 2: Lectura y Entendimiento del Framework NebulaE (Path 2)
 *   **Objetivo:** Comprender la arquitectura y filosofía del framework NebulaE mediante lectura de documentación.
-*   **Descripción:** Estudio teórico del framework NebulaE, sus herramientas principales (@nebulae/cli, @nebulae/event-store, @nebulae/backend-node-tools) y comprensión de la arquitectura general. Se analizará la documentación y se entenderán los principios que guían el desarrollo en NebulaE.
+*   **Descripción:** En este módulo, te sumergirás en el corazón de nuestro ecosistema: el framework NebulaE. El objetivo es que entiendas *por qué* construimos las cosas de la manera en que lo hacemos.
+
+    Tu primera tarea es explorar la documentación en **npm** de las herramientas clave. Comienza con **`@nebulae/cli`**. No te enfoques en memorizar comandos, sino en entender su propósito: es la herramienta que te permitirá crear, registrar y componer microservicios de manera estandarizada. Presta especial atención a la sección de **"Architecture Overview"**, ya que es un resumen visual y conceptual de los patrones que usamos: **CQRS** (separar la escritura de la lectura de datos) y **Event Sourcing** (almacenar el estado como una secuencia de eventos).
+
+    Luego, revisa **`@nebulae/event-store`**. Este paquete es la implementación técnica del Event Sourcing. Aquí, el concepto clave es el **"Evento de Dominio"** (ej: `USUARIO_CREADO`), que se convierte en la única fuente de verdad. Entenderás cómo usamos **RxJS** para manejar flujos de eventos de manera reactiva y cómo los microservicios se comunican de forma asíncrona a través de un **Message Broker** (como MQTT o Pub/Sub).
+
+    Finalmente, explora **`@nebulae/backend-node-tools`**. Este es tu kit de herramientas para el día a día. Fíjate en cómo resolvemos problemas comunes: **manejo de errores estructurado** (con `CustomError`), **logging estandarizado**, y **autenticación y autorización**. Conceptos como la **abstracción del broker** (`brokerFactory`) te mostrarán cómo aplicamos patrones de diseño para hacer nuestro código más flexible.
+
+    Los videos de **Introducción al Framework** y la **Vista General de Arquitectura** te darán un recorrido guiado por estos conceptos, conectando la teoría de DDD que viste en el módulo anterior con la implementación práctica en NebulaE. Al final, deberías poder dibujar un diagrama simple de cómo un comando fluye a través del sistema, genera un evento y actualiza una vista de lectura.
 *   **Recursos Web:**
     *   [npm: @nebulae/cli](https://www.npmjs.com/package/@nebulae/cli)
     *   [Architecture Overview](https://www.npmjs.com/package/@nebulae/cli#architecture-overview)
@@ -62,21 +78,48 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 3: Fundamentos de NodeJS (Path 3)
 *   **Objetivo:** Establecer una base sólida en los paradigmas de programación que guían el estilo de código en NebulaE.
-*   **Descripción:** Introducción a los fundamentos de NodeJS y los paradigmas de programación declarativa vs imperativa. Se establecerán las bases conceptuales para el desarrollo backend eficiente.
+*   **Descripción:** Este módulo establece las bases del estilo de programación que favorecemos en NebulaE para el backend con NodeJS. El objetivo no es solo aprender la sintaxis de JavaScript, sino adoptar un paradigma de programación específico que hace el código más legible, mantenible y menos propenso a errores.
+
+    El recurso principal, tanto el artículo de **DEV.to** como el video, se centra en una dicotomía fundamental: **Programación Imperativa vs. Declarativa**.
+
+    *   **Programación Imperativa:** Es la que probablemente ya conoces. Se enfoca en el **"cómo"**: le das a la computadora una secuencia de pasos explícitos para llegar al resultado. Piensa en un bucle `for` donde manualmente iteras, verificas una condición y modificas una variable.
+
+    *   **Programación Declarativa:** Se enfoca en el **"qué"**: describes el resultado que deseas, y el lenguaje o framework se encarga de los pasos. En lugar de un bucle `for`, usarías métodos de array como `.filter()` o `.map()`. Le dices "quiero una lista con solo los números pares", no "itera sobre esta lista, revisa si cada número es par, y si lo es, agrégalo a una nueva lista".
+
+    Tu tarea es internalizar esta diferencia. Lee el artículo para obtener la base conceptual y luego mira el video para reforzarlo con ejemplos visuales. Intenta reescribir un bucle `for` simple usando un enfoque declarativo. El concepto clave a extraer es que el código declarativo es más expresivo y se alinea mejor con el pensamiento funcional, que es un pilar en nuestro trabajo con flujos de datos y eventos. Al final de este módulo, deberías poder identificar si un bloque de código es imperativo o declarativo y explicar por qué uno es preferible sobre el otro en el contexto de NebulaE.
 *   **Recursos Web:**
     *   [Programación Imperativa vs Declarativa](https://dev.to/siddharthshyniben/explained-imperative-vs-declarative-programming-577g) (1h)
 *   **Videos:** [Programación Imperativa vs Declarativa](https://www.youtube.com/watch?v=E7Fbf7R3x6I)
 
 ### Módulo 4: Conceptos Básicos de React (Path 4)
 *   **Objetivo:** Comprender los conceptos fundamentales de React para construir interfaces de usuario.
-*   **Descripción:** Introducción a React, componentes funcionales, JSX y los conceptos básicos del renderizado. Se establecerán los fundamentos para construir interfaces de usuario modernas y responsivas.
+*   **Descripción:** Este módulo es tu punto de partida en el mundo del frontend moderno con React. El objetivo es que comprendas cómo React nos permite construir interfaces de usuario complejas a partir de piezas pequeñas, reutilizables y aisladas.
+
+    La documentación oficial de **React.dev ("Introducción a React")** es tu recurso principal y debes seguirla de manera secuencial. Los conceptos clave que debes dominar son:
+
+    1.  **Componentes:** Son los bloques de construcción de tu UI. Entiende la idea de que una interfaz es un árbol de componentes (ej: un componente `Button` dentro de un componente `LoginForm` dentro de una página `LoginPage`). Enfócate en los **componentes funcionales**, que es el estándar moderno.
+    2.  **JSX:** Es una extensión de sintaxis para JavaScript que te permite escribir "HTML" dentro de tu código JS. La clave es entender que no es HTML real, sino una forma declarativa de describir la estructura de tu UI. Aprende a usar llaves `{}` para insertar lógica y variables de JavaScript directamente en tu marcado.
+    3.  **Props (Propiedades):** Son la forma de pasar datos desde un componente padre a un componente hijo. Piensa en ellas como los argumentos de una función. Son inmutables (solo de lectura) para el componente que las recibe.
+    4.  **Estado (State):** Este es uno de los conceptos más importantes. El estado es la memoria interna de un componente. A través del hook `useState`, un componente puede "recordar" información (como el valor de un input o si un menú está abierto) y React volverá a renderizar el componente automáticamente cuando ese estado cambie.
+    5.  **Renderizado Condicional y Listas:** Aprende a usar operadores de JavaScript (como el ternario `? :` o el `&&`) para mostrar u ocultar componentes, y el método `.map()` para renderizar listas de datos de forma dinámica.
+
+    El **video de introducción a React** te servirá como un excelente complemento visual, guiándote a través de la creación de un componente desde cero y mostrando cómo se conectan los conceptos de componentes, props, estado y fetching de datos. Al final de este módulo, deberías ser capaz de crear un componente simple que reciba datos a través de props y maneje su propio estado interno con `useState`.
 *   **Recursos Web:**
     *   [Introducción a React (React.dev)](https://react.dev/learn) (2h)
 *   **Videos:** [Introducción a React (componentes, props, estado, fetching)](https://www.youtube.com/watch?v=LDB4uaJ87e0) (1h)
 
 ### Módulo 5: Introducción a MongoDB y Modelo de Documentos (Path 5)
 *   **Objetivo:** Establecer una base sólida en el ecosistema de MongoDB y su arquitectura.
-*   **Descripción:** Introducción a MongoDB, su arquitectura y el modelo de documentos. Se explorarán los conceptos fundamentales de las bases de datos NoSQL y las ventajas del modelo de documentos para el desarrollo de aplicaciones modernas.
+*   **Descripción:** Este módulo te introduce al mundo de las bases de datos NoSQL a través de MongoDB, la tecnología de persistencia que utilizamos en NebulaE. El objetivo es que comprendas por qué elegimos un modelo de documentos flexible en lugar de las tradicionales bases de datos relacionales (SQL).
+
+    Los dos cursos de **MongoDB University** son tu hoja de ruta. Comienza con **"Intro to MongoDB"**. Aquí, el concepto fundamental es entender qué es una **base de datos orientada a documentos**. En lugar de filas y tablas, pensarás en **documentos** (similares a objetos JSON) agrupados en **colecciones**. Presta atención a la introducción de **MongoDB Atlas**, que es la plataforma en la nube que usaremos para desplegar y gestionar nuestras bases de datos, abstrayéndonos de la complejidad de la infraestructura.
+
+    El segundo curso, **"MongoDB and the Document Model"**, es donde profundizarás en el "cómo". La lección más importante aquí es el **modelado de datos**. A diferencia de SQL, donde normalizas y unes tablas, en MongoDB tienes dos estrategias principales:
+
+    1.  **Embedding (Incrustar):** Guardar datos relacionados directamente dentro de un único documento. Es ideal para relaciones "uno-a-pocos" donde los datos se leen juntos (ej: los comentarios de un post).
+    2.  **Referencing (Referenciar):** Guardar el ID de un documento en otro, de forma similar a una clave foránea. Se usa para relaciones "uno-a-muchos" o "muchos-a-muchos" para evitar la duplicación de datos.
+
+    Tu objetivo es entender las ventajas y desventajas de cada enfoque. No hay una única respuesta correcta; la decisión depende del caso de uso y de los patrones de acceso a los datos. Los videos del material de MongoDB University te guiarán con ejemplos prácticos. Al final de este módulo, deberías poder explicar la diferencia entre un modelo relacional y un modelo de documentos, y cuándo usarías embedding vs. referencing.
 *   **Recursos Web:**
     *   [Intro to MongoDB](https://learn.mongodb.com/courses/start-here-introduction-to-mongodb) (1.25h)
     *   [MongoDB and the Document Model](https://learn.mongodb.com/courses/overview-of-mongodb-and-the-document-model) (1.25h)
@@ -84,7 +127,17 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 6: Configuración del Entorno CLI y Herramientas Básicas (Path 6)
 *   **Objetivo:** Configurar el entorno de desarrollo con las herramientas fundamentales.
-*   **Descripción:** Instalación y configuración inicial de herramientas esenciales: Git, nvm y Node.js. Se establecerán las bases para un entorno de desarrollo eficiente con todos los prerrequisitos necesarios.
+*   **Descripción:** Este módulo es puramente práctico y fundamental para que puedas empezar a trabajar. El objetivo es que dejes tu máquina local perfectamente configurada con las herramientas básicas que todo desarrollador en NebulaE necesita.
+
+    Sigue los recursos en el orden sugerido. La meta no es solo instalar, sino entender *qué* estás instalando y *por qué*.
+
+    1.  **Git:** Es el sistema de control de versiones que usamos para todo. Sigue la guía de **instalación de Git** para tu sistema operativo. No te detengas en la instalación; asegúrate de configurar tu nombre de usuario y correo electrónico (`git config --global user.name "Tu Nombre"` y `git config --global user.email "tu.email@example.com"`). Git es la base para colaborar y gestionar el historial de nuestro código.
+
+    2.  **nvm (Node Version Manager):** Esta es una herramienta crucial. En lugar de instalar Node.js directamente, instalarás **nvm**. ¿Por qué? Porque nvm te permite instalar y cambiar entre **múltiples versiones de Node.js** fácilmente. Diferentes proyectos pueden requerir diferentes versiones de Node.js, y nvm evita conflictos y te da control total sobre tu entorno. Sigue las instrucciones en el repositorio de GitHub para instalarlo. Una vez instalado, úsalo para instalar la versión LTS (Long-Term Support) más reciente de Node.js con el comando `nvm install --lts`.
+
+    3.  **Node.js:** Aunque nvm lo instala, es importante que visites la página oficial de **Node.js** para entender qué es: un entorno de ejecución de JavaScript del lado del servidor. Es la base sobre la que construiremos todo nuestro backend.
+
+    El **video de configuración del entorno** te guiará visualmente a través de estos pasos. Al final de este módulo, deberías tener los comandos `git`, `nvm`, y `node` disponibles en tu terminal. Verifica que cada uno funciona ejecutando `git --version`, `nvm --version`, y `node --version`. Este es un paso crítico; sin un entorno bien configurado, no podrás avanzar en los próximos días.
 *   **Recursos Web:**
     *   **Git:**
         * [Instalación de Git (Español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
@@ -102,7 +155,13 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 1: Contextos Delimitados (Path 1)
 *   **Objetivo:** Dominar los conceptos del diseño estratégico como los Contextos Delimitados y la organización de equipos.
-*   **Descripción:** Profundización en los Contextos Delimitados como herramienta fundamental para definir los límites de los microservicios y organizar equipos de desarrollo.
+*   **Descripción:** Este módulo profundiza en el concepto más importante del diseño estratégico de DDD: el Contexto Delimitado (Bounded Context). El objetivo es que dejes de ver los microservicios como simples contenedores de código y los entiendas como fronteras lingüísticas y de modelo.
+
+    El artículo de **Martin Fowler sobre Bounded Context** es la lectura canónica. Léelo con atención. El concepto clave es que un término (como "Cliente") puede significar cosas diferentes en distintas partes del negocio (Ventas vs. Soporte). Un Contexto Delimitado es la frontera explícita donde un modelo de dominio y un lenguaje específico tienen validez. No hay un "Cliente" universal.
+
+    El video de **Eric Evans**, el creador de DDD, te dará una perspectiva de primera mano sobre cómo estos "límites" son cruciales para evitar que los microservicios se conviertan en un "gran barro distribuido". Te ayudará a conectar la teoría con la práctica de definir los límites de tus servicios.
+
+    Al final de este módulo, deberías ser capaz de tomar un dominio de negocio simple, identificar los diferentes contextos lingüísticos y proponer límites claros para los microservicios, explicando qué modelo pertenece a cada contexto.
 *   **Recursos Web:**
     *   **Bounded Contexts - Conceptos Fundamentales:**
         * [Bounded Context - Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html) (1h)
@@ -111,13 +170,31 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 2: Estructura de Microservicio NebulaE (Path 2)
 *   **Objetivo:** Comprender la estructura de carpetas fundamental de un microservicio NebulaE.
-*   **Descripción:** Análisis detallado de la estructura generada, entendiendo el propósito de las carpetas `frontend`, `api`, `backend`, `deployment` y `playground`. Se explorarán las convenciones y patrones utilizados.
+*   **Descripción:** En este módulo, diseccionarás la anatomía de un microservicio generado por NebulaE. El objetivo es que entiendas el propósito de cada carpeta y archivo, y cómo contribuyen a una arquitectura limpia y organizada.
+
+    Usando la **documentación interna** y el **video explicativo**, analizarás la estructura de carpetas generada por el CLI. Los directorios clave que debes entender son:
+
+    *   `frontend`: Contiene la aplicación de React, que es el micro-frontend de este servicio.
+    *   `api`: Define la capa de API Gateway, responsable de exponer los endpoints al exterior y componer las vistas de lectura (queries).
+    *   `backend`: Aquí reside la lógica de negocio principal (el "write-side" de CQRS). Contiene los agregados, eventos de dominio y la lógica de comandos.
+    *   `deployment`: Incluye los archivos necesarios para desplegar el microservicio (ej: Dockerfiles, configuraciones de Kubernetes).
+    *   `playground`: Un espacio aislado para que puedas experimentar con los componentes de tu microservicio sin afectar la aplicación principal.
+
+    Tu tarea es navegar por esta estructura y entender el flujo de una petición. ¿Dónde se define una ruta de la API? ¿Cómo invoca un comando en el backend? ¿Dónde se guarda un evento? Al final, deberías poder explicar el rol de cada carpeta y cómo se relacionan entre sí para implementar los patrones de CQRS y Event Sourcing.
 *   **Recursos Web:** Documentación interna de estructura de proyectos
 *   **Videos:** "Estructura y Arquitectura de un Microservicio NebulaE" (1h)
 
 ### Módulo 3: Asincronismo en JavaScript (Path 3)
 *   **Objetivo:** Dominar los patrones de asincronismo de NodeJS.
-*   **Descripción:** Estudio profundo de Callbacks, Promises y Async/Await como fundamentos del desarrollo asíncrono en NodeJS. Se practicarán ejemplos reales de cada patrón.
+*   **Descripción:** NodeJS es asíncrono por naturaleza, y dominar este concepto es absolutamente crítico para ser un desarrollador de backend eficaz. Este módulo te llevará desde los patrones más antiguos hasta la sintaxis moderna para manejar operaciones que no bloquean el hilo principal.
+
+    La **guía de asincronismo de MDN** es tu recurso principal. Debes entender la evolución y el propósito de cada patrón:
+
+    1.  **Callbacks:** El enfoque original. Entiende el problema que resuelven, pero también por qué conducen al "Callback Hell" (código anidado y difícil de leer).
+    2.  **Promises (Promesas):** La solución al Callback Hell. Una promesa es un objeto que representa la eventual finalización (o fallo) de una operación asíncrona. Aprende a consumir promesas con `.then()` y a manejar errores con `.catch()`.
+    3.  **Async/Await:** Azúcar sintáctico sobre las promesas. Te permite escribir código asíncrono que se ve y se comporta como código síncrono, haciéndolo mucho más legible y fácil de razonar. Esta es la forma en que escribimos la mayor parte de nuestro código asíncrono en NebulaE.
+
+    Los **videos** te proporcionarán ejemplos prácticos y visuales de cada uno de estos patrones. Tu objetivo es no solo entenderlos, sino ser capaz de convertir un trozo de código basado en callbacks a uno que use promesas, y finalmente a uno que use async/await. Al final, deberías poder explicar qué es el "event loop" de NodeJS a un alto nivel y por qué async/await es la mejor herramienta para el trabajo.
 *   **Recursos Web:**
     *   [Guía de asincronismo en JS: Callbacks, Promises, Async/Await (MDN)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) (2h)
 *   **Videos:** 
@@ -126,7 +203,14 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 4: Hooks de React (Path 4)
 *   **Objetivo:** Utilizar los hooks esenciales para manejar el estado y los efectos secundarios.
-*   **Descripción:** Implementación práctica de useState y useEffect para manejar estado local y efectos secundarios en componentes funcionales. Se crearán ejemplos prácticos de uso.
+*   **Descripción:** Si los componentes son los ladrillos de React, los hooks son las herramientas que les dan vida. En este módulo, te centrarás en los dos hooks más fundamentales que usarás constantemente.
+
+    La **documentación oficial de React.dev** y los **videos** te guiarán a través de:
+
+    1.  **`useState`:** Este es el hook que te permite añadir estado (memoria) a tus componentes funcionales. El concepto clave es que cuando actualizas una variable de estado con su función `set`, React automáticamente vuelve a renderizar el componente para reflejar el cambio en la UI. Practica creando contadores, manejando inputs de formularios y alternando la visibilidad de elementos.
+    2.  **`useEffect`:** Este hook te permite ejecutar "efectos secundarios" en tus componentes. Un efecto secundario es cualquier código que interactúa con el mundo exterior al componente, como hacer una petición a una API, suscribirse a un evento o manipular el DOM directamente. El concepto clave es el array de dependencias: es el segundo argumento de `useEffect` y controla *cuándo* se vuelve a ejecutar el efecto. Un array vacío `[]` significa que el efecto se ejecuta solo una vez, cuando el componente se monta.
+
+    Tu objetivo es entender la diferencia fundamental entre estado y efectos. `useState` es para datos que el componente *posee*, mientras que `useEffect` es para interactuar con sistemas *externos*. Al final, deberías ser capaz de construir un componente que obtenga datos de una API al montarse (`useEffect`) y los guarde en su estado interno (`useState`) para mostrarlos en la UI.
 *   **Recursos Web:**
     *   [Hooks: useState y useEffect (React.dev)](https://react.dev/reference/react/useState) (1.5h)
 *   **Videos:** 
@@ -135,14 +219,41 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 5: MongoDB Atlas - Configuración y Primeros Pasos (Path 5)
 *   **Objetivo:** Configurar MongoDB Atlas y realizar las primeras conexiones.
-*   **Descripción:** Configuración de una instancia de MongoDB Atlas, comprensión de la interfaz y realización de las primeras operaciones básicas. Se establecerán las conexiones fundamentales para el desarrollo.
+*   **Descripción:** Este módulo es práctico y te llevará de la teoría a la acción. El objetivo es que crees tu propio clúster de base de datos en la nube y aprendas a interactuar con él.
+
+    El curso **"Getting Started with MongoDB Atlas"** de MongoDB University es tu guía paso a paso. Las tareas clave que debes completar son:
+
+    1.  **Crear una cuenta en MongoDB Atlas:** Regístrate y familiarízate con el dashboard principal.
+    2.  **Desplegar un clúster gratuito (M0):** Aprende a configurar un clúster, seleccionando un proveedor de nube y una región. Entiende que Atlas se encarga de toda la provisión y gestión de la infraestructura por ti.
+    3.  **Configurar la seguridad:** Esta es una parte crítica. Debes aprender a añadir tu dirección IP a la lista de acceso (IP Access List) para poder conectarte a tu clúster. También crearás tu primer usuario de base de datos con un nombre y una contraseña.
+    4.  **Cargar datos de ejemplo:** Atlas proporciona datasets de ejemplo que puedes cargar en tu clúster. Esto te dará datos reales con los que podrás practicar consultas.
+    5.  **Obtener la cadena de conexión:** Aprende a encontrar y copiar la "connection string". Esta es la URL especial que tus aplicaciones usarán para conectarse a la base de datos.
+
+    El **video tutorial** reforzará estos pasos visualmente. Al final de este módulo, no solo tendrás un clúster de MongoDB funcionando en la nube, sino que también entenderás los pasos de seguridad básicos necesarios para protegerlo y permitir el acceso a tus aplicaciones.
 *   **Recursos Web:**
     *   [Getting Started with MongoDB Atlas](https://learn.mongodb.com/courses/getting-started-with-mongodb-atlas) (1.25h)
 *   **Videos:** Tutorial de configuración de MongoDB Atlas
 
 ### Módulo 6: Comandos Esenciales de Terminal y Navegación (Path 6)
 *   **Objetivo:** Dominar los comandos esenciales de la terminal para navegación y manipulación básica de archivos.
-*   **Descripción:** Práctica con comandos fundamentales de navegación y gestión de archivos: `ls`, `cd`, `pwd`, `mkdir`, `rm`, `cp`, `mv`, `chmod`. Se establecerán las bases para el trabajo eficiente en línea de comandos.
+*   **Descripción:** La terminal es una de las herramientas más poderosas de un desarrollador. En este módulo, te asegurarás de dominar los comandos fundamentales para moverte por el sistema de archivos y realizar operaciones básicas. La eficiencia en la línea de comandos te ahorrará incontables horas a lo largo de tu carrera.
+
+    Utiliza los **recursos de Wikipedia y GNU Coreutils** como referencia, pero el aprendizaje real vendrá de la práctica. Los **videos** te darán un tour guiado. Abre tu terminal y practica con cada uno de estos comandos hasta que se sientan como una segunda naturaleza:
+
+    *   **Navegación:**
+        *   `pwd` (print working directory): ¿Dónde estoy?
+        *   `ls` (list): ¿Qué hay aquí? (Usa `ls -la` para ver archivos ocultos y detalles).
+        *   `cd` (change directory): Muévete a otro directorio (Usa `cd ..` para subir un nivel, `cd ~` para ir a tu home).
+    *   **Manipulación de archivos y directorios:**
+        *   `mkdir` (make directory): Crea un nuevo directorio.
+        *   `touch`: Crea un archivo vacío.
+        *   `cp` (copy): Copia un archivo o directorio.
+        *   `mv` (move): Mueve o renombra un archivo o directorio.
+        *   `rm` (remove): Elimina un archivo (Usa `rm -r` para eliminar un directorio y su contenido. ¡CON CUIDADO!).
+    *   **Permisos:**
+        *   `chmod` (change mode): Entiende a un alto nivel cómo cambiar los permisos de lectura, escritura y ejecución de un archivo.
+
+    El objetivo no es memorizar cada opción de cada comando, sino construir un mapa mental de cómo navegar y manipular tu sistema de archivos sin depender de una interfaz gráfica.
 *   **Recursos Web:**
     *   **Comandos Bash:**
         * [Comandos Bash – Wikipedia (Español)](https://es.wikipedia.org/wiki/Comandos_Bash)
@@ -157,21 +268,50 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 1: Instalación del Entorno y Generación de Primer Microservicio (Path 2)
 *   **Objetivo:** Instalar el entorno de desarrollo de NebulaE y generar el primer microservicio desde cero.
-*   **Descripción:** Configuración del CLI de NebulaE e instalación de herramientas necesarias. Generación de un microservicio completo para comprender la estructura fundamental de carpetas y archivos que siguen las convenciones de NebulaE. Aplicación práctica de todos los conceptos estudiados en los días anteriores.
+*   **Descripción:** Este es el módulo donde todo lo aprendido hasta ahora converge en una acción concreta. El objetivo es instalar la interfaz de línea de comandos (CLI) de NebulaE y usarla para generar tu primer microservicio.
+
+    Las tareas son muy prácticas:
+
+    1.  **Instalación del CLI de NebulaE:** Siguiendo la documentación, instalarás nuestro paquete `@nebulae/cli` de forma global en tu sistema usando npm. Esto te dará acceso al comando `nebulae` en tu terminal.
+    2.  **Generación de un microservicio:** Ejecutarás el comando para generar un nuevo microservicio. Presta atención a las preguntas que te hace el CLI (como el nombre del servicio, el agregado principal, etc.).
+    3.  **Exploración del código generado:** Una vez generado, abrirás el proyecto en tu editor de código y verificarás que la estructura de carpetas (`frontend`, `api`, `backend`, etc.) coincide con lo que aprendiste en el módulo de "Estructura de Microservicio NebulaE".
+    4.  **Aplicación de conceptos:** Este ejercicio práctico es una aplicación directa de los conceptos de los días anteriores. La estructura del microservicio está diseñada en torno a los principios de DDD y CQRS. El backend utiliza NodeJS y su asincronismo. El frontend es una aplicación de React. Y todo está gestionado con Git y se ejecuta sobre Node.js, herramientas que ya has instalado.
+
+    Al final de este módulo, tendrás un esqueleto de microservicio funcional en tu máquina local. Este será el punto de partida para las implementaciones de las próximas semanas.
 *   **Recursos Web:**
     *   Instalación del CLI de NebulaE
     *   Comandos de generación de microservicios
 
 ### Módulo 2: Programación Declarativa vs Imperativa (Path 3)
 *   **Objetivo:** Dominar el estilo de programación declarativa utilizado en NebulaE.
-*   **Descripción:** Práctica intensiva con métodos de Array y programación funcional. Se enfocará en la diferencia entre programación imperativa y declarativa con ejemplos prácticos.
+*   **Descripción:** Este módulo es una continuación práctica del Día 1. El objetivo es que dejes de *entender* la diferencia entre programación declarativa e imperativa y comiences a *aplicarla* de forma natural. Nos centraremos en los métodos de Array, que son la herramienta principal para escribir código declarativo en JavaScript.
+
+    La **documentación de MDN** sobre los métodos de Array es tu referencia. No tienes que memorizarla, sino entender el propósito de los métodos más comunes:
+
+    *   `.map()`: Transforma cada elemento de un array en algo nuevo. (Ej: un array de usuarios -> un array de nombres de usuario).
+    *   `.filter()`: Crea un nuevo array con solo los elementos que cumplen una condición. (Ej: un array de números -> un array solo con los números pares).
+    *   `.reduce()`: "Reduce" un array a un único valor. (Ej: un array de números -> la suma de todos los números).
+
+    El **video sobre métodos de Array** te mostrará ejemplos prácticos de cómo usar y encadenar estos métodos. Tu tarea es tomar problemas que normalmente resolverías con un bucle `for` (imperativo) y reescribirlos usando una combinación de `.map()`, `.filter()` y `.reduce()` (declarativo).
+
+    El concepto clave a extraer es la **composición**. El poder del enfoque declarativo reside en encadenar estas funciones para realizar operaciones complejas de una manera muy legible y concisa. Al final, deberías sentirte cómodo manipulando colecciones de datos sin necesidad de escribir bucles `for`.
 *   **Recursos Web:**
     *   [Práctica Declarativa: Métodos de Array (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) (1.5h)
 *   **Videos:** [Métodos de Array en JavaScript](https://www.youtube.com/watch?v=8MoElay6dWU)
 
 ### Módulo 3: Introducción a Redux - Conceptos Fundamentales (Path 4)
 *   **Objetivo:** Comprender los conceptos fundamentales de Redux para gestión de estado global.
-*   **Descripción:** Introducción a los principios de Redux: Store, Actions, Reducers. Se establecerán las bases para la gestión de estado complejo en aplicaciones React.
+*   **Descripción:** Mientras que `useState` es excelente para el estado local de un componente, las aplicaciones complejas necesitan una forma de gestionar el "estado global" (datos que son compartidos por muchas partes de la aplicación). Aquí es donde entra Redux. El objetivo de este módulo es que entiendas el *problema* que Redux resuelve y los conceptos básicos de su solución.
+
+    La **documentación oficial de Redux** y el **video tutorial** te introducirán a los tres pilares de Redux:
+
+    1.  **Store (Tienda):** Es un único objeto JavaScript que contiene todo el estado de tu aplicación. Es la "única fuente de verdad".
+    2.  **Actions (Acciones):** Son objetos planos que describen *qué pasó*. No contienen la lógica, solo la intención. (Ej: `{ type: 'todos/todoAdded', payload: 'Comprar leche' }`).
+    3.  **Reducers (Reductores):** Son funciones puras que toman el estado actual y una acción, y devuelven el *nuevo* estado. Son los únicos que pueden modificar el estado. La clave es que no modifican el estado original, sino que devuelven una copia inmutable con los cambios.
+
+    El flujo de datos en Redux es unidireccional: una acción se "despacha" al store, el store llama al reducer correspondiente con el estado actual y la acción, el reducer devuelve el nuevo estado, y el store se actualiza.
+
+    Tu objetivo no es convertirte en un experto en Redux en un día, sino entender este flujo y el propósito de cada una de sus partes. Al final, deberías poder dibujar un diagrama del flujo de datos de Redux y explicar el rol del store, las acciones y los reducers.
 *   **Recursos Web:**
     *   [Redux: Conceptos Fundamentales (Redux.js.org)](https://redux.js.org/introduction/getting-started) (1.5h)
 *   **Videos:** Tutoriales de Redux básico
@@ -179,14 +319,44 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 4: Conexión a MongoDB usando MongoDB Shell (Path 5)
 *   **Objetivo:** Aprender a interactuar con MongoDB usando la shell nativa.
-*   **Descripción:** Práctica con MongoDB Shell para realizar operaciones básicas de conexión y consulta. Se establecerán las bases para la interacción directa con la base de datos.
+*   **Descripción:** Ahora que tienes un clúster de MongoDB Atlas en la nube, es hora de conectarte a él y empezar a "hablar" con la base de datos. La forma más directa de hacerlo es a través de la **MongoDB Shell (`mongosh`)**, una interfaz de línea de comandos interactiva.
+
+    El curso de **MongoDB University** te guiará en el proceso:
+
+    1.  **Instalación de `mongosh`:** Primero, deberás instalar la shell en tu máquina local.
+    2.  **Conexión al clúster:** Usarás la "connection string" que obtuviste de Atlas para conectarte a tu clúster desde tu terminal.
+    3.  **Operaciones básicas:** Una vez conectado, aprenderás los comandos fundamentales para interactuar con la base de datos. Estos comandos son JavaScript, por lo que la sintaxis te resultará familiar. Las operaciones clave a practicar son:
+        *   Mostrar bases de datos y colecciones.
+        *   Cambiar a una base de datos específica.
+        *   **CRUD (Create, Read, Update, Delete):**
+            *   Insertar documentos (`insertOne`, `insertMany`).
+            *   Buscar documentos (`findOne`, `find`).
+            *   Actualizar documentos (`updateOne`, `updateMany`).
+            *   Eliminar documentos (`deleteOne`, `deleteMany`).
+
+    El objetivo es que te sientas cómodo realizando operaciones básicas directamente en la base de datos. Esto es invaluable para la depuración, la inspección de datos y la ejecución de tareas administrativas. Al final, deberías ser capaz de conectarte a tu clúster y realizar las cuatro operaciones CRUD desde la `mongosh`.
 *   **Recursos Web:**
     *   [Connecting to a MongoDB Database Using the MongoDB Shell](https://learn.mongodb.com/courses/connecting-to-a-mongodb-database-using-the-mongodb-shell) (1.75h)
 *   **Videos:** Material práctico de MongoDB Shell
 
 ### Módulo 5: Manipulación y Búsqueda de Texto con grep y find (Path 6)
 *   **Objetivo:** Dominar herramientas avanzadas de búsqueda y manipulación de texto en terminal.
-*   **Descripción:** Uso de comandos de manipulación y búsqueda de texto: `cat`, `less`, `head`, `tail`, `grep`, `find`. Se practicarán técnicas de búsqueda eficiente y manipulación de archivos de texto.
+*   **Descripción:** Este módulo amplía tus habilidades en la línea de comandos, centrándose en dos de las herramientas más potentes para trabajar con archivos y texto: `find` y `grep`.
+
+    Usa los **recursos y videos** para aprender y practicar:
+
+    1.  **Visualización de archivos:**
+        *   `cat` (concatenate): Imprime el contenido completo de un archivo en la terminal. Útil para archivos pequeños.
+        *   `less`: Muestra el contenido de un archivo de forma paginada. Esencial para archivos grandes, ya que no carga todo el archivo en memoria.
+        *   `head` y `tail`: Muestran las primeras o últimas líneas de un archivo, respectivamente. Muy útil para revisar logs.
+
+    2.  **Búsqueda de contenido (`grep`):**
+        *   `grep` (Global Regular Expression Print) es tu navaja suiza para buscar texto dentro de los archivos. Aprende a usarlo para encontrar líneas que coincidan con una cadena de texto o una expresión regular. Practica con sus opciones más comunes, como `-i` (ignorar mayúsculas/minúsculas) y `-r` (búsqueda recursiva en un directorio).
+
+    3.  **Búsqueda de archivos (`find`):**
+        *   `find` es la herramienta para buscar archivos y directorios basándose en criterios como el nombre, el tipo, el tamaño o la fecha de modificación. Es mucho más potente que la búsqueda de tu explorador de archivos.
+
+    El objetivo es que dejes de abrir archivos manualmente para buscar cosas. Al final, deberías ser capaz de responder preguntas como "¿En qué archivos de mi proyecto se usa la función `getUser`?" o "Encuéntrame todos los archivos `.log` que se modificaron en las últimas 24 horas" usando una sola línea de comandos.
 *   **Recursos Web:**
     *   **Comandos de texto:**
         * [Comandos Bash – Wikipedia (Español)](https://es.wikipedia.org/wiki/Comandos_Bash)
@@ -202,7 +372,17 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 1: Métodos Funcionales en JavaScript (Path 3)
 *   **Objetivo:** Profundizar en programación funcional y métodos de Array.
-*   **Descripción:** Práctica avanzada con métodos funcionales de Array como map, filter, reduce. Se crearán ejemplos complejos que demuestren el poder de la programación declarativa.
+*   **Descripción:** Este módulo es una inmersión profunda en el paradigma de programación funcional en JavaScript. El objetivo es que no solo uses `.map` o `.filter`, sino que entiendas los principios subyacentes y puedas componer funciones complejas para manipular datos de manera elegante y predecible.
+
+    Los **recursos de MDN y freeCodeCamp** te guiarán a través de:
+
+    1.  **Dominio de `map`, `filter`, `reduce`:** Irás más allá del uso básico. Practicarás encadenando estos métodos para realizar transformaciones de datos en varios pasos sin crear variables intermedias.
+    2.  **Programación Funcional:** Se introducirán conceptos clave del paradigma funcional:
+        *   **Funciones Puras:** Funciones que, para la misma entrada, siempre devuelven la misma salida y no tienen efectos secundarios observables.
+        *   **Inmutabilidad:** La práctica de no modificar los datos existentes, sino crear nuevas estructuras de datos con los valores actualizados. Esto es fundamental para la previsibilidad del estado (y es por eso que Redux lo exige).
+        *   **Funciones de Orden Superior (Higher-Order Functions):** Funciones que toman otras funciones como argumentos o las devuelven como resultado (`map`, `filter` y `reduce` son ejemplos perfectos).
+
+    Los **videos** te mostrarán cómo refactorizar código imperativo a un estilo funcional. Tu objetivo es empezar a "pensar en flujos de datos". En lugar de "hacer un bucle y cambiar cosas", pensarás en "tomar estos datos, filtrarlos, luego transformarlos, y finalmente calcular un resultado". Al final, deberías ser capaz de escribir transformaciones de datos complejas usando la composición de funciones puras.
 *   **Recursos Web:**
     *   **Métodos de Array (MDN):**
         * [Array.prototype.map() - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) (1h)
@@ -218,14 +398,39 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 2: React Redux Integración (Path 4)
 *   **Objetivo:** Integrar Redux con React usando las herramientas modernas.
-*   **Descripción:** Implementación práctica de React Redux usando `Provider`, `useSelector` y `useDispatch`. Se creará una aplicación ejemplo que demuestre el flujo completo de datos.
+*   **Descripción:** Ahora que entiendes los conceptos de React y Redux por separado, es hora de unirlos. Este módulo te enseñará a conectar tus componentes de React al store de Redux para que puedan leer el estado global y despachar acciones.
+
+    La **documentación de React-Redux** y el **video crash course** se centrarán en las herramientas modernas (hooks) que hacen esta integración muy sencilla:
+
+    1.  **`<Provider>`:** Este es un componente de React-Redux que "envuelve" toda tu aplicación. Su único propósito es hacer que el store de Redux esté disponible para todos los componentes que lo necesiten, sin tener que pasar el store manualmente a través de las props.
+    2.  **`useSelector`:** Este es un hook que permite a un componente *leer* datos del store de Redux. Le pasas una función que selecciona la porción del estado que te interesa, y `useSelector` se encargará de que tu componente se vuelva a renderizar automáticamente si esos datos cambian.
+    3.  **`useDispatch`:** Este hook te da acceso a la función `dispatch` del store. La usarás para despachar acciones desde tus componentes en respuesta a eventos del usuario (como hacer clic en un botón).
+
+    El flujo completo que debes practicar es:
+    *   Un usuario interactúa con un componente (ej: hace clic en "Añadir Tarea").
+    *   El manejador de eventos del componente usa `useDispatch` para despachar una acción (ej: `{ type: 'todos/todoAdded', ... }`).
+    *   El reducer correspondiente actualiza el estado en el store.
+    *   El componente que muestra la lista de tareas, que está usando `useSelector` para leer esa parte del estado, se vuelve a renderizar automáticamente para mostrar la nueva tarea.
+
+    Al final, deberías ser capaz de construir una pequeña aplicación donde el estado es gestionado completamente por Redux y los componentes de React son solo la capa de visualización que lee y reacciona a los cambios en el store.
 *   **Recursos Web:**
     *   [React Redux: Conectando Redux con React (React-Redux.js.org)](https://react-redux.js.org/introduction/getting-started) (1h)
 *   **Videos:** [Crash Course React completo](https://www.youtube.com/watch?v=CgkZ7MvWUAA) (2h)
 
 ### Módulo 3: Conexión MongoDB desde Node.js (Path 5)
 *   **Objetivo:** Aprender a interactuar con MongoDB desde aplicaciones Node.js.
-*   **Descripción:** Implementación de conexiones desde Node.js a MongoDB. Se realizarán operaciones básicas de conexión y se establecerán las bases para operaciones CRUD.
+*   **Descripción:** Mientras que la MongoDB Shell es útil para tareas manuales, tus aplicaciones necesitan una forma programática de conectarse a la base de datos. En este módulo, aprenderás a usar el driver oficial de MongoDB para Node.js para conectar tu backend a tu clúster de Atlas.
+
+    Los **cursos de MongoDB University** te guiarán a través del proceso:
+
+    1.  **Instalación del Driver:** Aprenderás a añadir el paquete `mongodb` a tu proyecto de Node.js como una dependencia.
+    2.  **Establecimiento de la Conexión:** Usarás la "connection string" de Atlas para crear un cliente de MongoDB en tu código de Node.js y establecer una conexión con la base de datos. Aprenderás a manejar tanto la conexión exitosa como los posibles errores.
+    3.  **Realización de Operaciones CRUD:** Una vez conectado, replicarás las operaciones que hiciste en la shell, pero esta vez desde tu código JavaScript:
+        *   Obtendrás una referencia a una colección específica.
+        *   Usarás funciones asíncronas (con `async/await`) para insertar, buscar, actualizar y eliminar documentos.
+        *   Aprenderás a manejar los resultados de estas operaciones (por ejemplo, el documento encontrado o el número de documentos modificados).
+
+    El objetivo es que te sientas cómodo escribiendo la lógica de acceso a datos en tu aplicación de Node.js. Al final de este módulo, deberías ser capaz de escribir un script simple de Node.js que se conecte a tu base de datos de Atlas y realice las cuatro operaciones CRUD, registrando los resultados en la consola. Esta es la base para construir los repositorios de datos en tus microservicios.
 *   **Recursos Web:**
     *   [Connecting to a MongoDB Database Using the MongoDB Shell](https://learn.mongodb.com/courses/connecting-to-a-mongodb-database-using-the-mongodb-shell) (1.75h)
     *   [Connecting to MongoDB in Node.js](https://learn.mongodb.com/courses/connecting-to-mongodb-in-nodejs) (1h)
@@ -233,7 +438,20 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 4: Encadenamiento de Comandos y Redirección (Path 6)
 *   **Objetivo:** Dominar técnicas avanzadas de encadenamiento de comandos y redirección en terminal.
-*   **Descripción:** Uso avanzado de pipes (`|`), redirección (`>`, `>>`), y operadores de control (`;`, `&&`). Se practicarán técnicas de encadenamiento eficiente para automatizar tareas complejas.
+*   **Descripción:** Este módulo te enseñará a componer las herramientas de línea de comandos que has aprendido para crear flujos de trabajo potentes y automatizados. El objetivo es que dejes de ver los comandos como herramientas aisladas y empieces a verlos como bloques de construcción que puedes conectar.
+
+    Los **recursos y videos** se centrarán en tres conceptos clave:
+
+    1.  **Pipes (`|`):** El pipe es uno de los conceptos más poderosos de la terminal. Te permite tomar la salida estándar (stdout) de un comando y usarla como la entrada estándar (stdin) de otro. Esto te permite "encadenar" comandos. Por ejemplo, `ls -l | grep ".js"` primero lista todos los archivos con detalles y luego filtra esa lista para mostrar solo las líneas que contienen ".js".
+    2.  **Redirección (`>` y `>>`):** La redirección te permite cambiar dónde va la salida de un comando.
+        *   `>`: Redirige la salida a un archivo, sobrescribiendo el archivo si ya existe. (Ej: `ls -l > mis_archivos.txt`).
+        *   `>>`: Redirige la salida a un archivo, añadiéndola al final del archivo si ya existe. (Ej: `echo "Nuevo log" >> log.txt`).
+    3.  **Operadores de Control (`;`, `&&`, `||`):** Estos te permiten ejecutar múltiples comandos en una sola línea.
+        *   `;`: Ejecuta los comandos en secuencia, sin importar si el anterior tuvo éxito o no.
+        *   `&&` (AND): Ejecuta el segundo comando solo si el primero tuvo éxito.
+        *   `||` (OR): Ejecuta el segundo comando solo si el primero falló.
+
+    Tu objetivo es practicar la combinación de estas técnicas. Intenta construir comandos complejos, como "Encuentra todos los archivos de log en mi proyecto, busca las líneas que contienen la palabra 'ERROR', y guarda esas líneas en un nuevo archivo llamado `errores.log`". Al final, deberías poder automatizar tareas simples combinando varios comandos en una sola línea.
 *   **Recursos Web:**
     *   **Pipes y Redirección:**
         * [Guía de Redirección y Pipes en Linux – Tecmint (Español)](https://www.tecmint.com/use-linux-pipes-to-connect-commands/)
@@ -248,7 +466,14 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 1: Conceptos Avanzados de JavaScript (Path 3)
 *   **Objetivo:** Consolidar conocimientos de JavaScript con conceptos de igualdad y valores falsy.
-*   **Descripción:** Estudio de igualdad y valores falsy en JavaScript como fundamento para evitar errores comunes en el desarrollo. Se practicarán casos edge que son frecuentes en desarrollo real.
+*   **Descripción:** A menudo, los errores más sutiles en JavaScript provienen de una mala comprensión de cómo el lenguaje maneja la igualdad y los valores "falsos". Este módulo se enfoca en clarificar estos conceptos para que puedas escribir código más robusto.
+
+    La **documentación de MDN** y los **videos** son tus recursos. Los conceptos clave son:
+
+    1.  **Igualdad Estricta (`===`) vs. Igualdad Débil (`==`):** La regla de oro es: **usa siempre la igualdad estricta (`===`)**. Aprende por qué. La igualdad estricta compara tanto el valor como el tipo, sin hacer conversiones mágicas. La igualdad débil (`==`) intenta convertir los tipos antes de comparar, lo que lleva a resultados inesperados (ej: `0 == false` es `true`). Entiende los peligros de la coerción de tipos.
+    2.  **Valores "Falsy":** En JavaScript, no solo `false` es falso en un contexto booleano. Hay una lista corta de valores "falsy" que debes memorizar: `false`, `0`, `""` (string vacío), `null`, `undefined`, y `NaN`. Todos los demás valores son "truthy" (incluyendo objetos vacíos `{}` y arrays vacíos `[]`).
+
+    Tu objetivo es entender cómo estos conceptos afectan las sentencias condicionales (`if`). Practica escribiendo condicionales que verifiquen explícitamente la existencia de valores. Por ejemplo, en lugar de `if (miVariable)`, que podría fallar si `miVariable` es `0` o un string vacío pero es un valor válido, podrías necesitar una verificación más explícita como `if (miVariable !== undefined && miVariable !== null)`. Al final, deberías poder explicar la diferencia entre `==` y `===` con ejemplos claros y listar los seis valores falsy de memoria.
 *   **Recursos Web:**
     *   [Igualdad y Falsy Values en JS (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) (0.5h)
 *   **Videos:** 
@@ -257,19 +482,59 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 2: Práctica Integral React (Path 4)
 *   **Objetivo:** Crear un componente React completo que integre todos los conceptos aprendidos.
-*   **Descripción:** Desarrollo de un componente funcional completo que utilice hooks, gestión de estado local, efectos secundarios y conexión con Redux. Se implementará un ejemplo práctico del mundo real.
+*   **Descripción:** Este módulo es un proyecto práctico para consolidar todo lo que has aprendido sobre React y Redux. El objetivo es que construyas un pequeño "feature" de principio a fin.
+
+    No hay nuevos recursos teóricos aquí. En su lugar, **integrarás todos los recursos de React de la semana**. El **video del proyecto guiado** te servirá de inspiración, pero el verdadero aprendizaje vendrá de que lo intentes tú mismo.
+
+    La tarea es construir un componente funcional completo que:
+    1.  **Obtenga datos de una fuente externa:** Usa `useEffect` para hacer una petición a una API pública (como una API de chistes o de datos de ejemplo) cuando el componente se monta.
+    2.  **Maneje el estado de carga:** Usa `useState` para guardar el estado de la petición (ej: 'idle', 'loading', 'succeeded', 'failed'). Muestra un spinner o un mensaje de "Cargando..." mientras la petición está en curso.
+    3.  **Guarde los datos en Redux:** Cuando la petición tenga éxito, despacha una acción para guardar los datos recibidos en el store de Redux.
+    4.  **Muestre los datos desde Redux:** Usa `useSelector` para leer los datos del store y renderizarlos en tu componente.
+    5.  **Permita la interacción del usuario:** Añade un botón que, al hacer clic, despache otra acción (por ejemplo, para volver a cargar los datos o para añadir un nuevo elemento a la lista en el store).
+
+    Al final de este módulo, tendrás una pieza de software funcional que demuestra el flujo de datos completo en una aplicación React/Redux moderna. Habrás conectado todos los puntos: componentes, hooks, efectos secundarios y gestión de estado global.
 *   **Recursos Web:** Integración de todos los recursos de React de la semana
 *   **Videos:** Proyecto práctico guiado
 
 ### Módulo 3: Práctica Integral MongoDB (Path 5)
 *   **Objetivo:** Realizar operaciones completas con MongoDB desde diferentes interfaces.
-*   **Descripción:** Práctica integral que incluye operaciones desde MongoDB Shell y desde Node.js. Se implementarán operaciones de lectura y escritura básicas que servirán como base para semanas posteriores.
+*   **Descripción:** Al igual que el módulo de React, esta es una práctica integral para consolidar tus habilidades con MongoDB. El objetivo es que te sientas cómodo interactuando con tu base de datos tanto para tareas administrativas como a través de tu aplicación.
+
+    **Integrarás todos los recursos de MongoDB de la semana** y seguirás la **sesión práctica en video**. Las tareas a realizar son:
+
+    1.  **Desde la MongoDB Shell (`mongosh`):**
+        *   Conéctate a tu clúster de Atlas.
+        *   Crea una nueva base de datos y una nueva colección.
+        *   Inserta varios documentos con diferentes estructuras.
+        *   Escribe consultas (`find`) para filtrar los documentos basándote en diferentes criterios (ej: igualdad, operadores de comparación como `$gt` (mayor que)).
+        *   Actualiza uno o más documentos.
+        *   Elimina un documento.
+
+    2.  **Desde Node.js:**
+        *   Crea un nuevo script de Node.js.
+        *   Conéctate a la misma base de datos de Atlas.
+        *   Escribe funciones `async` para replicar las mismas operaciones CRUD que hiciste en la shell.
+        *   Asegúrate de manejar los errores y de cerrar la conexión a la base de datos correctamente.
+
+    El objetivo es verificar que puedes realizar las mismas operaciones desde dos entornos diferentes. Esto refuerza tu comprensión de los comandos de MongoDB y te da la confianza para empezar a construir la capa de persistencia de tus microservicios. Al final, deberías tener un script de Node.js que pueda manipular datos en tu base de datos de Atlas de forma fiable.
 *   **Recursos Web:** Integración de todos los recursos de MongoDB de la semana
 *   **Videos:** Sesión práctica con MongoDB
 
 ### Módulo 4: Configuración Completa del Entorno (Path 6)
 *   **Objetivo:** Completar la configuración del entorno de desarrollo con todas las herramientas necesarias.
-*   **Descripción:** Instalación y configuración completa de Git, nvm, Node.js y paquetes globales necesarios. Se verificará que el entorno esté completamente listo para el desarrollo en NebulaE, incluyendo automatización básica con Bash.
+*   **Descripción:** Este módulo final de herramientas es una lista de verificación para asegurar que tu entorno de desarrollo está 100% listo para ser productivo en NebulaE. Además de verificar las instalaciones, te introducirás a la automatización básica con scripts de Bash.
+
+    Las tareas son:
+
+    1.  **Verificación de Herramientas:** Vuelve a verificar que `git`, `nvm`, y `node` están instalados y configurados correctamente. Asegúrate de haber instalado los paquetes globales de npm que sean necesarios, como el CLI de NebulaE.
+    2.  **Automatización con Bash:** La **guía de programación de Bash** y el **video crash course** te introducirán a la escritura de scripts de shell simples. El objetivo no es convertirte en un experto en Bash, sino aprender a automatizar tareas repetitivas.
+        *   Crea tu primer script `.sh`.
+        *   Aprende a usar variables y a ejecutar comandos dentro del script.
+        *   Haz que tu script sea ejecutable con `chmod +x mi_script.sh`.
+        *   Practica creando un script que haga algo útil, como crear una estructura de carpetas para un nuevo proyecto o ejecutar una serie de comandos de limpieza.
+
+    Al final de este módulo, no solo tendrás un entorno de desarrollo robusto y verificado, sino que también habrás dado tus primeros pasos en la automatización de tareas, una habilidad fundamental en el mundo de DevOps.
 *   **Recursos Web:**
     *   **Instalación de herramientas:**
         * [Instalación de Git (Español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
@@ -280,7 +545,16 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ### Módulo 5: Integración de Conocimientos
 *   **Objetivo:** Conectar todos los conceptos aprendidos durante la semana.
-*   **Descripción:** Sesión de integración donde se conectan los conceptos de DDD, la estructura de NebulaE, los fundamentos de Node.js, React, MongoDB y herramientas CLI. Se prepara el terreno para la Semana 2.
+*   **Descripción:** Esta es una sesión de recapitulación para conectar todos los puntos. El objetivo es que puedas articular cómo las diferentes tecnologías y conceptos que has aprendido encajan en el panorama general del desarrollo en NebulaE.
+
+    Usando la **síntesis de materiales** y la **sesión de video**, reflexionarás sobre las siguientes conexiones:
+
+    *   ¿Cómo los principios de **DDD** (Path 1) informan la estructura de un microservicio **NebulaE** (Path 2)?
+    *   ¿Cómo el backend en **Node.js** (Path 3) se conecta a **MongoDB** (Path 5) para persistir los datos?
+    *   ¿Cómo el frontend en **React** (Path 4) se comunica con el backend (aunque aún no hayamos construido la API, puedes conceptualizarlo)?
+    *   ¿Cómo las **herramientas CLI** (Path 6) te permiten gestionar, construir y ejecutar todo el sistema?
+
+    El objetivo es que construyas un mapa mental de alto nivel del ecosistema. Dibuja un diagrama que muestre un microservicio, su base de datos, su frontend, y cómo interactuarías con él como desarrollador. Esta visión holística es crucial para prepararte para la Semana 2, donde empezarás a implementar lógica de negocio real dentro de esta estructura.
 *   **Recursos Web:** Síntesis de todos los materiales de la semana
 *   **Videos:** Sesión de síntesis y preparación para Semana 2
 
