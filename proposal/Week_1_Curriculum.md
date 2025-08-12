@@ -148,7 +148,7 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
     *   **Node.js:**
         * [Node.js en Español](https://nodejs.org/es)
         * [Node.js Official](https://nodejs.org/en)
-*   **Videos:** [Configuración básica del entorno de desarrollo](https://www.youtube.com/watch?v=c2-032jBDL4)
+*   **Videos:** [Configuración básica del entorno de desarrollo](https://youtu.be/RzYQwp_6UKs)
 
 ---
 
