@@ -481,19 +481,18 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
     *   [Falsy Values](https://www.youtube.com/watch?v=5DVqAFhfSsE)
 
 ### Módulo 2: Práctica Integral React (Path 4)
-*   **Objetivo:** Crear un componente React completo que integre todos los conceptos aprendidos.
-*   **Descripción:** Este módulo es un proyecto práctico para consolidar todo lo que has aprendido sobre React y Redux. El objetivo es que construyas un pequeño "feature" de principio a fin.
-
-    No hay nuevos recursos teóricos aquí. En su lugar, **integrarás todos los recursos de React de la semana**. El **video del proyecto guiado** te servirá de inspiración, pero el verdadero aprendizaje vendrá de que lo intentes tú mismo.
-
-    La tarea es construir un componente funcional completo que:
-    1.  **Obtenga datos de una fuente externa:** Usa `useEffect` para hacer una petición a una API pública (como una API de chistes o de datos de ejemplo) cuando el componente se monta.
-    2.  **Maneje el estado de carga:** Usa `useState` para guardar el estado de la petición (ej: 'idle', 'loading', 'succeeded', 'failed'). Muestra un spinner o un mensaje de "Cargando..." mientras la petición está en curso.
-    3.  **Guarde los datos en Redux:** Cuando la petición tenga éxito, despacha una acción para guardar los datos recibidos en el store de Redux.
-    4.  **Muestre los datos desde Redux:** Usa `useSelector` para leer los datos del store y renderizarlos en tu componente.
-    5.  **Permita la interacción del usuario:** Añade un botón que, al hacer clic, despache otra acción (por ejemplo, para volver a cargar los datos o para añadir un nuevo elemento a la lista en el store).
-
-    Al final de este módulo, tendrás una pieza de software funcional que demuestra el flujo de datos completo en una aplicación React/Redux moderna. Habrás conectado todos los puntos: componentes, hooks, efectos secundarios y gestión de estado global.
+*   **Objetivo:** Conectar el frontend de tu microservicio con un estado global de Redux y manejar un flujo de datos completo.
+*   **Descripción:** En esta práctica, darás vida al `frontend` de tu microservicio. Ya no es un ejercicio aislado; es una implementación dentro de la estructura real de tu proyecto que creaste en el Día 3.
+    *   **Práctica Dirigida:**
+        1.  **Localiza tu micro-frontend:** Navega a la carpeta `frontend` de tu microservicio.
+        2.  **Crea un nuevo componente:** Dentro de la estructura de componentes existente (ej: `frontend/src/components/`), crea un nuevo componente funcional en su propio archivo (ej: `DataFetcher.js`).
+        3.  **Implementa el flujo de datos de Redux:**
+            *   Define una nueva acción y un nuevo reducer para manejar una lista de datos de ejemplo.
+            *   Usa `useEffect` en tu componente `DataFetcher` para despachar una acción que cargue datos de ejemplo en el store de Redux cuando el componente se monte.
+            *   Usa el hook `useSelector` en tu componente para leer esa lista de datos del store y mostrarla.
+        4.  **Añade interacción:** Agrega un botón en tu componente que, al hacer clic, despache otra acción para añadir un nuevo elemento a la lista en el store de Redux.
+        5.  **Integra el componente:** Importa y renderiza tu nuevo componente `DataFetcher` en alguna de las páginas existentes del micro-frontend para que sea visible.
+    *   **Meta a lograr:** Tener un componente, dentro de la aplicación de React de tu microservicio, que pueda despachar acciones a Redux y reaccionar a los cambios en el estado global, mostrando los datos actualizados sin recargar la página.
 *   **Recursos Web:** Integración de todos los recursos de React de la semana
 *   **Videos:** Proyecto práctico guiado
 
