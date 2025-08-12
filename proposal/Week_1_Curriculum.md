@@ -138,7 +138,7 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
     3.  **Node.js:** Aunque nvm lo instala, es importante que visites la página oficial de **Node.js** para entender qué es: un entorno de ejecución de JavaScript del lado del servidor. Es la base sobre la que construiremos todo nuestro backend.
 
-    El **video de configuración del entorno** te guiará visualmente a través de estos pasos. Al final de este módulo, deberías tener los comandos `git`, `nvm`, y `node` disponibles en tu terminal. Verifica que cada uno funciona ejecutando `git --version`, `nvm --version`, y `node --version`. Este es un paso crítico; sin un entorno bien configurado, no podrás avanzar en los próximos días.
+    En el **video de configuración del entorno**, aprenderás a ensamblar un entorno de desarrollo robusto y versátil. La guía visual te llevará a través de la instalación de `git` para el control de versiones y `nvm` (Node Version Manager) para gestionar múltiples versiones de Node.js. Siguiendo el video, usarás `nvm` para instalar varias versiones clave de Node.js: 10, 12, 14, 18 y 22. El video también cubre la instalación de paquetes `npm` globales esenciales: para la versión 10 de Node, instalarás `@nebulae/cli` y `nodemon`; para la versión 12, instalarás los mismos paquetes y además `yarn`. Al completar estos pasos, tendrás un entorno de desarrollo profesional, capaz de manejar los requisitos de diversos proyectos de NebulaE y listo para los siguientes módulos.
 *   **Recursos Web:**
     *   **Git:**
         * [Instalación de Git (Español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
