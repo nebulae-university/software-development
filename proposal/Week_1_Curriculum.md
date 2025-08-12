@@ -554,9 +554,8 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
     *   ¿Cómo el frontend en **React** (Path 4) se comunica con el backend (aunque aún no hayamos construido la API, puedes conceptualizarlo)?
     *   ¿Cómo las **herramientas CLI** (Path 6) te permiten gestionar, construir y ejecutar todo el sistema?
 
-    El objetivo es que construyas un mapa mental de alto nivel del ecosistema. Dibuja un diagrama que muestre un microservicio, su base de datos, su frontend, y cómo interactuarías con él como desarrollador. Esta visión holística es crucial para prepararte para la Semana 2, donde empezarás a implementar lógica de negocio real dentro de esta estructura.
+    El objetivo es que construyas un mapa mental de alto nivel del ecosistema usando miro.com. Dibuja un diagrama que muestre un microservicio, su base de datos, su frontend, y cómo interactuarías con él como desarrollador. Esta visión holística es crucial para prepararte para la Semana 2, donde empezarás a implementar lógica de negocio real dentro de esta estructura.
 *   **Recursos Web:** Síntesis de todos los materiales de la semana
-*   **Videos:** Sesión de síntesis y preparación para Semana 2
 
 ---
 
