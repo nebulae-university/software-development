@@ -8,6 +8,13 @@ Este path está diseñado para que el desarrollador internalice los principios d
 
 El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fundamentos de DDD hasta los patrones de comunicación y consistencia en arquitecturas de microservicios.
 
+### Playlist Recomendada: Software Architecture by Drawing Boxes
+
+Como complemento fundamental a las lecturas, se recomienda seguir la siguiente lista de reproducción que cubre de forma visual y progresiva los conceptos clave de la arquitectura de software moderna.
+
+*   **Playlist:** [Software Architecture - Drawing Boxes](https://www.youtube.com/playlist?list=PLsrRMpHuSOU1_AaGbbuJSxhYZmhsWYirn)
+*   **Descripción:** Abarca conceptos de arquitectura de software, desde microservicios, Clean Architecture, Domain-Driven Design, CQRS y Event Sourcing.
+
 ---
 
 ### Semana 1: Fundamentos de Domain-Driven Design (DDD)
@@ -17,6 +24,11 @@ El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fund
     *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h) - Lectura fundamental sobre cómo usar el análisis de dominio para modelar y definir los límites de los microservicios.
     *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h) - Explica cómo la estructura de los equipos influye en la arquitectura y promueve la autonomía.
     *   [Video: The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h) - Charla fundamental para aprender a identificar los límites de los contextos de negocio.
+    *   [Video: Hexagonal, Onion & Clean Architecture](https://www.youtube.com/watch?v=JubdZIdLQ4M) (15min) - Conceptos base de arquitecturas limpias.
+    *   [Video: Microservices vs Monolithic Architecture](https://www.youtube.com/watch?v=6-Wu178sOEE) (10min) - Comparativa fundamental de estilos arquitectónicos.
+    *   [Video: DDD Bounded Contexts & Subdomains](https://www.youtube.com/watch?v=NvBsEnDgA4o) (12min) - Visualización de los conceptos clave de DDD.
+    *   [Video: Conway’s Law](https://www.youtube.com/watch?v=TqhkWaeUN_8) (8min) - Entendiendo cómo la estructura del equipo moldea la arquitectura.
+    *   [Video: Boundaries & Encapsulation](https://www.youtube.com/watch?v=EBO0ysJr2BA) (10min) - Principios para el diseño de componentes y servicios.
 
 ### Semana 2: Patrones Tácticos de DDD y Aislamiento de Datos
 
@@ -25,6 +37,7 @@ El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fund
     *   [Identificando los bloques de construcción de DDD (Microsoft Docs)](https://docs.microsoft.com/es-es/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model) (2h) - Una guía detallada que cubre Entidades, Objetos de Valor y, fundamentalmente, el patrón Agregado.
     *   [Patrón: Base de Datos por Servicio (microservices.io)](https://microservices.io/patterns/data/database-per-service.html) (1h) - Explica por qué cada servicio debe tener su propia base de datos para asegurar un bajo acoplamiento.
     *   [Video: Dissecting Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=zkRfDw0N4W8) (1h) - Charla avanzada sobre los diferentes tipos de contextos, sus relaciones y patrones de evolución.
+    *   [Video: DDD Building Blocks](https://www.youtube.com/watch?v=xFl-QQZJFTA) (18min) - Un repaso visual a los patrones tácticos de DDD.
 
 ### Semana 3: Implementando DDD con CQRS y Event Sourcing
 
@@ -34,6 +47,10 @@ El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fund
     *   [Patrón Event Sourcing (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/patterns/event-sourcing) (1.5h) - Introduce el concepto de persistir el estado de una aplicación como una secuencia inmutable de eventos.
     *   [Patrón: Consumidor Idempotente (microservices.io)](https://microservices.io/patterns/communication-style/idempotent-consumer.html) (1h) - Un patrón crucial para evitar el procesamiento duplicado de mensajes en sistemas de comunicación asíncrona.
     *   [Video: DDD, Event Sourcing & CQRS - Teoría y Práctica (YouTube)](https://www.youtube.com/watch?v=rolfJR9ERxo) (1h) - Un recurso visual que conecta la teoría de los tres patrones y muestra su aplicación práctica.
+    *   [Video: CQS and CQRS](https://www.youtube.com/watch?v=cqNGAo-9pUE) (10min) - Aclarando la diferencia entre CQS y CQRS.
+    *   [Video: Events vs Commands](https://www.youtube.com/watch?v=vS7sCJ1uezY) (8min) - Diferencias clave para arquitecturas basadas en eventos.
+    *   [Video: Event Sourcing Explained](https://www.youtube.com/watch?v=yFjzGRb8NOk) (15min) - Una explicación clara del patrón Event Sourcing.
+    *   [Video: Outbox Pattern](https://www.youtube.com/watch?v=tQw99alEVHo) (12min) - Solucionando fallos en la entrega de eventos.
 
 ### Semana 4: Exposición de APIs y Aceleración del Desarrollo
 

@@ -42,7 +42,13 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 *   **Recursos Web:**
     *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h)
     *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h)
-*   **Videos:** [The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h)
+*   **Videos:**
+    *   [The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h)
+    *   [Video: Hexagonal, Onion & Clean Architecture](https://www.youtube.com/watch?v=JubdZIdLQ4M) (15min) - Conceptos base de arquitecturas limpias.
+    *   [Video: Microservices vs Monolithic Architecture](https://www.youtube.com/watch?v=6-Wu178sOEE) (10min) - Comparativa fundamental de estilos arquitectónicos.
+    *   [Video: DDD Bounded Contexts & Subdomains](https://www.youtube.com/watch?v=NvBsEnDgA4o) (12min) - Visualización de los conceptos clave de DDD.
+    *   [Video: Conway’s Law](https://www.youtube.com/watch?v=TqhkWaeUN_8) (8min) - Entendiendo cómo la estructura del equipo moldea la arquitectura.
+    *   [Video: Boundaries & Encapsulation](https://www.youtube.com/watch?v=EBO0ysJr2BA) (10min) - Principios para el diseño de componentes y servicios.
 
 ### Módulo 2: Lectura y Entendimiento del Framework NebulaE (Path 2)
 *   **Objetivo:** Comprender la arquitectura y filosofía del framework NebulaE mediante lectura de documentación.
