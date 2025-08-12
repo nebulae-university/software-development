@@ -4,6 +4,31 @@
 
 Este path se sumerge en el corazón de nuestros microservicios: la lógica de negocio. Se enfoca en el desarrollo del lado del servidor con NodeJS, haciendo un uso intensivo de la programación asíncrona y reactiva. El objetivo es dominar la implementación de lógicas de negocio complejas y eficientes utilizando NodeJS y los operadores clave de RxJS, y exponerlas a través de APIs robustas, bien definidas con OpenAPI y construidas con Express.
 
+### Descripción General del Path
+
+Este Path te lleva al cuarto de máquinas de nuestros microservicios. Si en el Path 2 aprendiste a *ensamblar* un servicio usando el framework, aquí aprenderás a construir su **motor**. El propósito es que domines el arte del desarrollo backend moderno en NodeJS, no solo como un ejecutor de lógica, sino como un director de orquesta que maneja flujos de datos complejos de manera eficiente y resiliente.
+
+**¿Qué se espera de ti?**
+Se espera una inmersión profunda en el paradigma de **programación reactiva**. Deberás abandonar la mentalidad de petición-respuesta secuencial y empezar a "pensar en streams". Este cambio de paradigma es exigente pero transformador. Se requiere paciencia, mucha práctica con los operadores de RxJS y una voluntad de entender cómo los datos fluyen, se transforman, se combinan y se manejan a lo largo del tiempo.
+
+**¿Qué vas a aprender?**
+Este es un viaje intensivo en NodeJS y, sobre todo, en RxJS. Al finalizar, serás capaz de:
+
+1.  **Dominar el Asincronismo en NodeJS:** Irás más allá del `async/await` básico para entender cómo y por qué la programación reactiva es la siguiente evolución para manejar operaciones concurrentes complejas, especialmente en un entorno basado en eventos como el nuestro.
+
+2.  **Pensar en Streams con RxJS:**
+    *   **Fundamentos:** Internalizarás los conceptos de `Observable`, `Observer` y `Subscription`. Entenderás la diferencia crucial entre observables "fríos" y "calientes".
+    *   **Maestría en Operadores:** Construirás un arsenal de operadores de RxJS para filtrar (`filter`, `take`, `debounceTime`), transformar (`map`, `mergeMap`, `concatMap`) y combinar (`forkJoin`, `zip`, `withLatestFrom`) flujos de datos.
+    *   **Manejo de Errores y Ciclo de Vida:** Aprenderás a construir pipelines de datos robustos que manejan errores con elegancia (`catchError`) y a gestionar la memoria para evitar fugas (`takeUntil`).
+
+3.  **Diseñar y Construir APIs Profesionales:**
+    *   Aprenderás a definir contratos de API claros y precisos usando la especificación **OpenAPI**, garantizando que tus servicios sean fáciles de entender y consumir.
+    *   Implementarás estos contratos usando **Express**, el framework estándar de facto para APIs en NodeJS.
+
+4.  **Comprender Tópicos Avanzados:** Profundizarás en temas de bajo nivel como la representación de datos (bits, bytes, endianness) para entender cómo se mueven los datos por la red, dándote una visión completa del stack.
+
+Este Path te dará las habilidades para construir la lógica de negocio más compleja de nuestros sistemas, creando backends que no solo funcionan, sino que son eficientes, escalables y reactivos.
+
 ## Plan de Estudios
 
 El plan se divide en 5 semanas, construyendo desde los fundamentos de NodeJS y paradigmas de programación, pasando por los fundamentos y operadores de RxJS, hasta el diseño e implementación de APIs basadas en especificaciones y tópicos avanzados.

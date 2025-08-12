@@ -4,6 +4,28 @@
 
 Este es el path más importante y práctico. Se centra en el "cómo" materializamos nuestros principios arquitectónicos en código funcional. El desarrollador aprenderá a usar nuestras herramientas internas para ser productivo desde el primer día, dominando el uso del framework de NebulaE para crear, desarrollar, probar y desplegar microservicios full-stack siguiendo nuestras convenciones y patrones.
 
+### Descripción General del Path
+
+Si el Path 1 fue el "qué" y el "porqué" de nuestra arquitectura, este Path es el **"cómo"**. Aquí es donde la teoría se encuentra con la realidad del código. El propósito de este camino es darte un dominio completo y práctico del **Framework NebulaE**, un conjunto de herramientas y convenciones diseñadas para acelerar el desarrollo de microservicios sin sacrificar los principios arquitectónicos que aprendiste. Dejarás de ser un espectador de la arquitectura para convertirte en su constructor.
+
+**¿Qué se espera de ti?**
+Se espera que te ensucies las manos. Este es un path de construcción, no de contemplación. Deberás seguir los tutoriales, ejecutar los comandos del CLI, escribir código tanto en el backend como en el frontend, y depurar los problemas que surjan. La meta es que al final de este recorrido, el framework no sea una "caja negra", sino un conjunto de herramientas que entiendes y puedes usar con confianza para materializar ideas de negocio en software funcional.
+
+**¿Qué vas a aprender?**
+Este Path te llevará en un viaje práctico a través del ciclo de vida completo de un microservicio full-stack:
+
+1.  **Dominio del CLI (`@nebulae/cli`):** Aprenderás a usar nuestra herramienta de línea de comandos como tu principal aliado para generar nuevos servicios, crear esqueletos de entidades de negocio (CRUDs) y automatizar tareas repetitivas.
+
+2.  **Construcción del Backend (Lado de Escritura):** Implementarás la lógica de negocio de tu servicio. Definirás `Comandos`, los procesarás en el backend, y publicarás `Eventos de Dominio` usando nuestro paquete `@nebulae/event-store`, el corazón de nuestro sistema de Event Sourcing.
+
+3.  **Desarrollo de APIs y Frontend (Lado de Lectura):** Expondrás tu lógica a través de una API de GraphQL y construirás una interfaz de usuario en React para interactuar con ella. Conectarás formularios para ejecutar `mutations` (comandos) y crearás vistas para mostrar datos a través de `queries`.
+
+4.  **Comunicación Asíncrona:** Irás más allá de un solo servicio y aprenderás a publicar y consumir eventos de dominio, permitiendo que tus microservicios colaboren de forma desacoplada y resiliente.
+
+5.  **Ciclo de Vida y Operaciones:** Finalmente, aprenderás a gestionar la configuración de tu servicio para diferentes entornos, a empaquetarlo con Docker y a entender los fundamentos del despliegue continuo y la depuración en un entorno distribuido.
+
+Al finalizar, habrás construido, desde cero, un microservicio completo, funcional y alineado con todos los patrones de NebulaE.
+
 ## Herramientas del Framework NebulaE
 
 Para facilitar el desarrollo y la adopción de nuestros patrones, el framework NebulaE proporciona las siguientes herramientas clave:

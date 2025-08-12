@@ -4,6 +4,30 @@
 
 Este path está diseñado para que el desarrollador domine las tecnologías y patrones de persistencia de datos y mensajería asíncrona que son fundamentales en la arquitectura de NebulaE. Al finalizar, el desarrollador será capaz de modelar datos de forma eficiente para alto rendimiento, interactuar con bases de datos MongoDB a nivel experto, administrar un clúster, optimizar consultas complejas, **implementar la comunicación asíncrona con MQTT y comprender los fundamentos de NATS y Google Pub/Sub.**
 
+### Descripción General del Path
+
+Este Path te lleva a las capas más profundas y críticas de cualquier sistema de software: los datos y la comunicación. Aquí aprenderás que los datos no son solo algo que se guarda y se recupera, sino que son el activo más valioso del negocio. El propósito de este camino es convertirte en un experto en la gestión de la persistencia y el flujo de información, dominando tanto las bases de datos NoSQL de alto rendimiento como los sistemas de mensajería que permiten a nuestros microservicios colaborar.
+
+**¿Qué se espera de ti?**
+Se espera que desarrolles una mentalidad orientada al rendimiento, la durabilidad y la resiliencia de los datos. Deberás pensar no solo en *qué* datos guardar, sino en *cómo* modelarlos para que las consultas sean ultrarrápidas. Te sumergirás en la administración de bases de datos y en la depuración de problemas de rendimiento. Además, adoptarás el paradigma asíncrono, no como una opción, sino como el pilar fundamental para la comunicación en sistemas distribuidos.
+
+**¿Qué vas a aprender?**
+Este es un viaje exhaustivo a través de MongoDB y los sistemas de mensajería, que te proporcionará un dominio completo sobre:
+
+1.  **MongoDB de Cero a Experto:**
+    *   **Desarrollo:** Dominarás todo el espectro de operaciones CRUD, el Aggregation Framework para consultas complejas y el uso del driver de Node.js.
+    *   **Modelado de Datos:** Aprenderás el arte de diseñar esquemas en un modelo de documentos, sabiendo cuándo incrustar (embed) o referenciar datos para un rendimiento óptimo.
+    *   **Optimización:** Te convertirás en un experto en rendimiento, aprendiendo a crear índices, analizar planes de consulta y optimizar operaciones lentas.
+    *   **Administración:** Adquirirás habilidades de DBA (Administrador de Base de Datos), incluyendo el uso de herramientas, monitorización de métricas, configuración de replicación y estrategias de backup/recovery.
+
+2.  **Maestría en Mensajería Asíncrona:**
+    *   **Fundamentos:** Entenderás por qué la comunicación síncrona es frágil en los microservicios y cómo la mensajería asíncrona proporciona desacoplamiento y resiliencia.
+    *   **Protocolo MQTT:** Dominarás los conceptos del protocolo MQTT (Broker, Publisher, Subscriber, Topics, QoS), que es nuestra principal elección para la comunicación IoT y de eventos.
+    *   **Implementación Práctica:** Construirás clientes en Node.js capaces de conectarse a un broker MQTT para publicar y suscribirse a mensajes.
+    *   **Visión del Ecosistema:** Obtendrás una visión general de otras tecnologías importantes como **NATS** y **Google Cloud Pub/Sub**, entendiendo sus casos de uso y diferencias.
+
+Al finalizar este Path, serás el guardián de los datos y la comunicación de NebulaE, capaz de diseñar, construir y mantener la columna vertebral de nuestra arquitectura.
+
 ## Plan de Estudios
 
 El plan se divide en 5 semanas, combinando dos learning paths principales de MongoDB University, un skill path enfocado en **Performance** y **recursos clave sobre sistemas de mensajería asíncrona**. Esta estructura asegura una progresión lógica desde los fundamentos del desarrollo hasta la administración avanzada, la optimización y la comunicación entre servicios.

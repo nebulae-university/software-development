@@ -4,6 +4,37 @@
 
 Este path familiariza al desarrollador con el ecosistema de DevOps, las herramientas de desarrollo y la infraestructura cloud de NebulaE. El objetivo es maximizar la productividad, asegurar despliegues fiables y capacitar al desarrollador para interactuar eficientemente con el entorno de producción y las herramientas de IA.
 
+### Descripción General del Path
+
+Este Path es el que hace que todo lo demás sea posible. Es el puente entre el código que escribes en tu máquina y el valor que entregas a los usuarios en producción. El propósito de este camino es inculcar una **mentalidad DevOps**, donde el desarrollo y las operaciones no son mundos separados, sino una disciplina unificada. Aprenderás a manejar las herramientas y la infraestructura que nos permiten construir, probar y desplegar software de manera rápida, automatizada y fiable.
+
+**¿Qué se espera de ti?**
+Se espera que te conviertas en un desarrollador autosuficiente. Deberás sentirte tan cómodo en la línea de comandos como en tu editor de código. Se requiere una curiosidad por entender cómo funcionan las cosas "debajo del capó": cómo se empaqueta una aplicación en un contenedor, cómo se orquesta en la nube y cómo fluye a través de un pipeline de CI/CD. La meta es que veas la infraestructura no como un obstáculo, sino como una herramienta poderosa que puedes y debes controlar.
+
+**¿Qué vas a aprender?**
+Este recorrido te convertirá en un maestro de la navaja suiza del desarrollador moderno, cubriendo:
+
+1.  **Maestría en la Línea de Comandos (CLI):**
+    *   Irás más allá de los comandos básicos para dominar la composición de herramientas (`grep`, `find`, `|`, `>`), permitiéndote realizar tareas complejas de manipulación y búsqueda de archivos directamente desde la terminal.
+
+2.  **Contenerización con Docker:**
+    *   Aprenderás a empaquetar tus aplicaciones y todas sus dependencias en **contenedores Docker** portátiles y reproducibles.
+    *   Orquestarás entornos de desarrollo locales complejos que simulan la producción usando **Docker Compose**, definiendo redes y volúmenes para aplicaciones multi-servicio.
+
+3.  **Orquestación en la Nube con Kubernetes (GKE):**
+    *   Darás el salto a la nube, aprendiendo a provisionar y gestionar clústeres de **Kubernetes** en Google Kubernetes Engine (GKE) usando la CLI de `gcloud`.
+    *   Interactuarás con tus clústeres usando `kubectl` para desplegar, inspeccionar y depurar aplicaciones.
+
+4.  **Automatización con CI/CD:**
+    *   Entenderás los principios de la Integración Continua y el Despliegue Continuo (CI/CD).
+    *   Aprenderás los fundamentos de **GitLab CI/CD** para automatizar el proceso de construcción, prueba y despliegue de tus contenedores en Kubernetes.
+
+5.  **Servicios Cloud y Automatización:**
+    *   Utilizarás servicios esenciales de **Google Cloud Platform (GCP)** como Pub/Sub para mensajería y Cloud Storage para almacenamiento de objetos.
+    *   Aprenderás a monitorear tus aplicaciones con Google Monitoring y a automatizar tareas repetitivas con **scripts de Bash**.
+
+Al finalizar este Path, tendrás una visión completa del ciclo de vida del software, desde un `git commit` hasta una aplicación funcionando a escala en la nube, y poseerás las habilidades para mantener ese ciclo funcionando de manera eficiente y robusta.
+
 ## Plan de Estudios
 
 El plan se divide en 5 semanas, progresando desde el dominio de la línea de comandos y el entorno local hasta la gestión de infraestructura cloud y la automatización.

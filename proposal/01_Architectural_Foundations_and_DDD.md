@@ -4,6 +4,27 @@
 
 Este path está diseñado para que el desarrollador internalice los principios de diseño y los patrones arquitectónicos que guían la creación de software robusto, escalable y alineado con las necesidades del negocio en NebulaE. Al finalizar, el desarrollador podrá descomponer un sistema en microservicios, diseñarlos siguiendo los principios de DDD y aplicar los patrones de comunicación, datos y despliegue más importantes.
 
+### Descripción General del Path
+
+Este Path es el pilar fundamental de la filosofía de desarrollo de NebulaE. Su propósito no es solo enseñar un conjunto de tecnologías, sino forjar una mentalidad de **Arquitecto de Software Moderno**. Aquí, aprenderás a pensar en el software no como una colección de funcionalidades, sino como un modelo vivo del negocio al que sirve.
+
+**¿Qué se espera de ti?**
+Se espera que te sumerjas en los conceptos con una mente crítica. No se trata de memorizar patrones, sino de entender profundamente el *porqué* de cada uno. Deberás cuestionar las soluciones monolíticas tradicionales y abrazar un enfoque donde el software se diseña para ser flexible, resiliente y, sobre todo, alineado con un dominio de negocio en constante evolución. Al final de este camino, no solo construirás software, sino que lo diseñarás con intención y propósito.
+
+**¿Qué vas a aprender?**
+A lo largo de este recorrido, dominarás las dos disciplinas que definen la arquitectura de NebulaE:
+
+1.  **Domain-Driven Design (DDD):**
+    *   **Estratégico:** Aprenderás a colaborar con expertos del negocio para descubrir y definir el **Lenguaje Ubicuo**. Descompondrás problemas complejos en **Contextos Delimitados** manejables, que se convertirán en la semilla de tus microservicios.
+    *   **Táctico:** Modelarás la lógica de negocio interna de cada servicio usando bloques de construcción como **Agregados**, **Entidades** y **Objetos de Valor**, garantizando que la lógica de dominio esté encapsulada y protegida.
+
+2.  **Arquitectura de Microservicios:**
+    *   **Patrones Fundamentales:** Implementarás patrones esenciales como **CQRS** y **Event Sourcing**, separando la lógica de escritura de la de lectura y construyendo sistemas basados en un flujo inmutable de eventos.
+    *   **Comunicación y Datos:** Resolverás los desafíos de la comunicación entre servicios y la consistencia de datos distribuidos, aprendiendo sobre **API Gateways**, **Bases de Datos por Servicio** y el patrón **Saga**.
+    *   **Despliegue y Operación:** Entenderás cómo empaquetar tus servicios en **contenedores** y cómo estandarizar el desarrollo con **plantillas de servicio** para acelerar la entrega de valor.
+
+Este Path te transformará de un programador que implementa requisitos a un arquitecto que modela soluciones de negocio.
+
 ## Plan de Estudios
 
 El plan se divide en 5 semanas, siguiendo una progresión lógica desde los fundamentos de DDD hasta los patrones de comunicación y consistencia en arquitecturas de microservicios.
