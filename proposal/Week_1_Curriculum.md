@@ -17,8 +17,9 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 *   **Foro de Dudas en Classroom:** Para preguntas asíncronas y discusiones técnicas detalladas.
 *   **Sesiones de Q&A en Vivo:** 
-    *   **Martes:** 9:00 AM - 10:00 AM y 3:00 PM - 4:00 PM
-    *   **Jueves:** 9:00 AM - 10:00 AM y 3:00 PM - 4:00 PM
+    *   **lunes:** 3:00 PM - 4:00 PM
+    *   **miercoles:** 9:00 AM - 10:00 AM y 3:00 PM - 4:00 PM
+    *   **viernes:** 3:00 PM - 4:00 PM
 *   **Google NotebookLM:** Herramienta recomendada para estudiar bajo las fuentes del currículo y acelerar la comprensión de conceptos complejos. Utiliza los documentos de cada path como fuentes de conocimiento.
 *   **Asistentes de IA:** Se incentiva el uso de ChatGPT, GitHub Copilot, Gemini CLI y Gemini Code Assist para facilitar el entendimiento del código, depuración y exploración de conceptos.
 
