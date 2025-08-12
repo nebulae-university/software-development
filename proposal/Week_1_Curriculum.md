@@ -559,85 +559,100 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ---
 
-## Evaluación de la Semana 1
+## Evaluación Integral de la Semana 1: Proyecto de Catering Corporativo
 
-### Prueba Práctica: "Configuración y Fundamentos Técnicos"
+### Introducción y Contexto del Proyecto
 
-**Descripción del Proyecto:**
-Implementar un proyecto que demuestre el dominio de todos los fundamentos técnicos aprendidos durante la semana, integrando conceptos de cada path.
+A lo largo de esta semana, aplicarás los conceptos de cada path en un único proyecto integral. En lugar de ejercicios aislados, construirás gradualmente una solución de software basada en un caso de estudio del mundo real. El objetivo es consolidar tu aprendizaje y demostrar tu capacidad para integrar arquitectura, backend, frontend, persistencia y herramientas.
 
-**Requisitos Técnicos:**
+**El Escenario: Digitalización de un Servicio de Catering Corporativo**
 
-1.  **Arquitectura (Path 1):** 
-    *   Definir un dominio simple (ej: gestión de libros) usando Lenguaje Ubicuo
-    *   Identificar un Contexto Delimitado claro
-    *   Documentar las decisiones de diseño
+Una empresa de catering busca optimizar su proceso de gestión de pedidos y entregas. Trabajarás a partir de la siguiente entrevista ficticia con un representante del negocio para modelar e implementar una parte de la solución.
 
-2.  **Framework NebulaE (Path 2):** 
-    *   Instalar correctamente el CLI de NebulaE
-    *   Generar la estructura básica de un microservicio
-    *   Documentar la estructura de carpetas y su propósito
+<details>
+<summary>Ver Entrevista con el Representante del Negocio</summary>
 
-3.  **Backend (Path 3):** 
-    *   Crear funciones que demuestren programación declarativa vs imperativa
-    *   Implementar ejemplos de asincronismo con Promises y Async/Await
-    *   Resolver ejercicios de métodos de Array (map, filter, reduce)
+**Entrevistador:** Gracias por su tiempo. Para comenzar, ¿podría describir cómo se recibe y procesa un pedido actualmente?
+**Representante:** Claro. El cliente entra a nuestra web o nos llama. Elige el menú, indica la fecha de entrega y el número de personas. Luego, un coordinador revisa si hay disponibilidad y confirma por correo o teléfono.
 
-4.  **Frontend (Path 4):** 
-    *   Crear un componente React funcional con useState y useEffect
-    *   Implementar un ejemplo básico de Redux con store, actions y reducers
-    *   Demostrar comprensión de JSX y renderizado condicional
+**Entrevistador:** ¿Qué información específica necesitan para aceptar un pedido?
+**Representante:** Nombre de la empresa, persona de contacto, teléfono, correo, dirección de entrega, número de personas, menú seleccionado, alergias o restricciones alimenticias, y hora deseada de entrega.
 
-5.  **Persistencia (Path 5):**
-    *   Configurar una instancia de MongoDB Atlas
-    *   Realizar conexión exitosa desde MongoDB Shell
-    *   Implementar conexión básica desde Node.js
+**Entrevistador:** Una vez confirmado el pedido, ¿qué pasos siguen internamente?
+**Representante:** Generamos una orden interna para cocina y logística. Cocina revisa inventario y solicita compras si es necesario. Logística asigna transporte y ruta. El día de la entrega, cocina prepara desde temprano y logística recoge y distribuye.
 
-6.  **DevOps/Herramientas (Path 6):**
-    *   Demostrar dominio de comandos básicos de terminal
-    *   Configurar correctamente nvm con múltiples versiones de Node
-    *   Instalar y configurar todas las herramientas de desarrollo
+**Entrevistador:** ¿Quiénes participan en este proceso y cuáles son sus roles?
+**Representante:** Coordinador de pedidos, Jefe de cocina, Compras, Logística y Transportista.
 
-**Criterios de Evaluación:**
+**Entrevistador:** ¿Existen métricas que utilicen para evaluar el servicio?
+**Representante:** Sí. Puntualidad en entregas, porcentaje de pedidos sin incidencias, satisfacción del cliente y número de pedidos repetidos.
 
-*   **Comprensión Conceptual (30%):** Dominio de conceptos fundamentales de cada path
-*   **Implementación Técnica (40%):** Correcta implementación de ejercicios prácticos
-*   **Configuración de Entorno (20%):** Entorno completamente funcional y documentado
-*   **Documentación (10%):** Capacidad de explicar decisiones y conceptos aprendidos
+**Entrevistador:** ¿Cuáles son las incidencias más comunes?
+**Representante:** Direcciones erróneas, retrasos por tráfico, cambios de último minuto y problemas con inventario.
 
-### Prueba Teórica: Fundamentos Multi-Path
+**Entrevistador:** ¿Hay algún flujo especial para pedidos urgentes?
+**Representante:** Sí, pedidos con menos de 24 horas de anticipación se marcan como urgentes y tienen un proceso especial.
 
-**Sección 1: Domain-Driven Design (20%)**
-*   Definir Lenguaje Ubicuo y proporcionar un ejemplo práctico
-*   Explicar qué es un Contexto Delimitado y su importancia
-*   Describir cómo DDD influye en el diseño de microservicios
+**Entrevistador:** ¿Cómo manejan la facturación?
+**Representante:** Contabilidad genera la factura electrónica. Clientes recurrentes se facturan mensual, otros por pedido.
 
-**Sección 2: NodeJS y Programación (25%)**
-*   Comparar programación imperativa vs declarativa con ejemplos
-*   Explicar la diferencia entre Callbacks, Promises y Async/Await
-*   Resolver problemas prácticos con métodos de Array
+**Entrevistador:** ¿Qué términos clave usan internamente?
+**Representante:** Pedido, orden interna, menú base, pedido urgente, incidencia, plan de cocina, ruta de entrega, cliente recurrente y pedido cancelado.
 
-**Sección 3: React Fundamentals (25%)**
-*   Explicar el concepto de componente funcional vs clase
-*   Describir el propósito de useState y useEffect con ejemplos
-*   Explicar los conceptos básicos de Redux (Store, Actions, Reducers)
+**Entrevistador:** ¿Existen temporadas o eventos que cambien la forma en que trabajan?
+**Representante:** En diciembre y fechas especiales, alta demanda y menús temáticos.
 
-**Sección 4: MongoDB y Herramientas (30%)**
-*   Describir las ventajas del modelo de documentos vs relacional
-*   Explicar cómo conectar MongoDB desde Node.js
-*   Demostrar conocimiento de comandos básicos de terminal
+**Entrevistador:** ¿Alguna regla de negocio importante?
+**Representante:** No aceptamos pedidos con menos de 12 horas de anticipación, cancelaciones con menos de 24 horas se cobran al 50%, y los pedidos urgentes tienen menú reducido.
 
-**Modo de Entrega:**
-*   **Proyecto Práctico:** Repositorio GitHub con implementaciones de cada path
-*   **Prueba Teórica:** Cuestionario en Google Classroom con casos prácticos
-*   **Configuración de Entorno:** Video demostrando el entorno funcionando
-*   **Fecha Límite:** Final del viernes de la Semana 1
-*   **Sesión de Feedback:** Lunes de la Semana 2 durante la sesión de Q&A
+</details>
 
-**Preparación para Semana 2:**
-*   **Path 1:** Patrones tácticos de DDD (Entidades, Agregados)
-*   **Path 2:** Implementación de lógica de negocio con NebulaE
-*   **Path 3:** Fundamentos de RxJS y Observables
-*   **Path 4:** Estilizado con Material UI y formularios con Formik
-*   **Path 5:** Operaciones CRUD en MongoDB
-*   **Path 6:** Docker y Docker Compose
+### Entregable: Tablero de Diseño en Miro
+
+Para esta evaluación, no escribirás código. En su lugar, consolidarás todo tu entendimiento teórico en un único **tablero de Miro.com público**. Este tablero será tu lienzo para diseñar la solución al problema de catering, demostrando tu comprensión de los patrones y la arquitectura de NebulaE.
+
+**Instrucciones del Entregable:**
+
+Crea un tablero en Miro y organiza las siguientes secciones, cada una respondiendo a las actividades y preguntas propuestas durante la semana.
+
+**Parte 1: Análisis y Diseño Estratégico (DDD)**
+1.  **Glosario del Lenguaje Ubicuo:** Crea una tabla con los términos clave extraídos de la entrevista, su definición y el contexto en el que aplica.
+2.  **Event Storming (Simplificado):** Modela el flujo principal de un pedido, desde que se solicita hasta que se entrega, identificando los **Eventos de Dominio** (ej: `PedidoSolicitado`, `DisponibilidadConfirmada`, `OrdenEnviadaACocina`).
+3.  **Contextos Delimitados (Bounded Contexts):** A partir del lenguaje y los eventos, propón al menos 3 o 4 Bounded Contexts (ej: `Gestión de Pedidos`, `Cocina`, `Logística`, `Facturación`). Describe brevemente la responsabilidad principal de cada uno.
+4.  **Mapa de Contextos:** Dibuja un diagrama que muestre tus Bounded Contexts y las relaciones entre ellos (ej: `Upstream/Downstream`, `Shared Kernel`).
+
+**Parte 2: Diseño Técnico y Alineación con NebulaE**
+1.  **Mapa de Componentes NebulaE:**
+    *   Asigna cada uno de tus Bounded Contexts a un **microservicio** hipotético de NebulaE.
+    *   Para **un (1)** de esos microservicios (ej: `Servicio de Pedidos`), define su **Agregado** principal (ej: `Pedido`).
+    *   Lista los **Eventos de Dominio** que este agregado emitiría (ej: `PedidoCreado`, `PedidoConfirmado`).
+2.  **Diseño de Contratos (Interfaces):**
+    *   Para tu agregado seleccionado, define sus contratos siguiendo las convenciones de NebulaE:
+        *   **Comandos:** `Pedido.crear`, `Pedido.confirmar`, `Pedido.cancelar` (incluye el payload mínimo para cada uno).
+        *   **Eventos:** `PedidoCreado{v1}`, `PedidoConfirmado{v1}` (incluye el `eventTypeVersion` y el payload).
+        *   **Queries:** `pedidoById`, `pedidosPorFecha` (describe qué información deberían devolver).
+3.  **Diagrama de Flujo de Datos:**
+    *   Crea un diagrama de secuencia para un flujo de **escritura (WRITE)**. Muestra cómo un `Comando` viaja desde el `frontend` (conceptual), pasa por la `api`, es manejado por el `backend`, genera un `Evento` y se persiste en la base de datos del `playground` (MongoDB local).
+    *   Crea un diagrama de secuencia para un flujo de **lectura (READ)**. Muestra cómo una petición del `frontend` llega a la `api`, que lee directamente de una `vista materializada` (conceptual) en MongoDB y devuelve los datos.
+4.  **Justificación Arquitectónica (Texto):**
+    *   Responde a las siguientes preguntas en un bloque de texto en tu tablero:
+        *   ¿Cómo el uso de eventos de dominio en tu diseño promueve el desacoplamiento entre los contextos de `Logística` y `Facturación`?
+        *   Para tu microservicio de `Pedidos`, ¿usarías una estrategia de CQRS/ES puro o CRUD+ES? Justifica brevemente tu elección.
+        *   En tu diagrama de flujo de escritura, ¿qué rol cumple el `Event Store` y el `Message Broker`?
+
+### Criterios de Evaluación
+
+Tu tablero de Miro será evaluado con base en la claridad, coherencia y correcta aplicación de los conceptos de la semana.
+
+*   **Análisis de Dominio y DDD (40%)**
+    *   **Calidad del Lenguaje Ubicuo:** El glosario es preciso y refleja fielmente la entrevista.
+    *   **Coherencia del Modelo:** Los eventos, contextos y el mapa de contextos son lógicos y están bien justificados a partir del caso de estudio.
+
+*   **Diseño Técnico y Comprensión de NebulaE (50%)**
+    *   **Alineación de Componentes:** La traducción de contextos a microservicios y agregados es coherente.
+    *   **Calidad de los Contratos:** Los comandos, eventos (con versión) y queries están bien definidos y siguen las convenciones.
+    *   **Claridad de los Flujos de Datos:** Los diagramas de lectura y escritura demuestran una clara comprensión de la arquitectura CQRS y las responsabilidades de cada capa (`frontend`, `api`, `backend`, `playground`).
+    *   **Profundidad de la Justificación:** Las respuestas a las preguntas de arquitectura son claras y demuestran un entendimiento de los principios del framework.
+
+*   **Presentación y Claridad (10%)**
+    *   El tablero de Miro está limpio, bien organizado y es fácil de navegar y entender.
