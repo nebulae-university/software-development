@@ -37,6 +37,18 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ## Día 1: Fundamentos Conceptuales y Configuración Inicial
 
+### Introducción del Día
+
+¡Bienvenido al primer día! Hoy sentaremos las bases de todo el programa. El objetivo es que te sumerjas en los conceptos fundamentales que definen nuestra arquitectura y configures tu entorno de desarrollo para estar listo para la acción. Se espera que al final del día tengas una comprensión clara de la filosofía de Domain-Driven Design (DDD), la estructura de nuestro framework NebulaE, y los pilares de tecnologías como NodeJS, React y MongoDB.
+
+Hoy te enfocarás en los siguientes módulos:
+*   **Módulo 1:** Fundamentos de Domain-Driven Design (Path 1)
+*   **Módulo 2:** Lectura y Entendimiento del Framework NebulaE (Path 2)
+*   **Módulo 3:** Fundamentos de NodeJS (Path 3)
+*   **Módulo 4:** Conceptos Básicos de React (Path 4)
+*   **Módulo 5:** Introducción a MongoDB y Modelo de Documentos (Path 5)
+*   **Módulo 6:** Configuración del Entorno CLI y Herramientas Básicas (Path 6)
+
 ### Módulo 1: Fundamentos de Domain-Driven Design (Path 1)
 *   **Objetivo:** Comprender la filosofía de DDD, su importancia para el negocio y los conceptos del diseño estratégico.
 *   **Descripción:** Este módulo introduce los fundamentos de Domain-Driven Design (DDD), una metodología crucial para construir software que está verdaderamente alineado con las metas del negocio. El objetivo es que dejes de pensar solo en tecnología y comiences a modelar el dominio del negocio.
@@ -154,6 +166,18 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ## Día 2: Profundización en Conceptos Core
 
+### Introducción del Día
+
+En nuestro segundo día, profundizaremos en los conceptos clave presentados ayer. El objetivo es pasar de la teoría a un entendimiento más práctico y aplicado. Hoy dominarás el concepto de Contextos Delimitados en DDD, diseccionarás la estructura de un microservicio NebulaE, y te enfrentarás al asincronismo en JavaScript. Además, darás tus primeros pasos prácticos con React Hooks y configurarás tu primer clúster de base de datos en la nube con MongoDB Atlas. Se espera que hoy consolides tu base teórica y la conectes con las herramientas que usarás a diario.
+
+Hoy te enfocarás en los siguientes módulos:
+*   **Módulo 1:** Contextos Delimitados (Path 1)
+*   **Módulo 2:** Estructura de Microservicio NebulaE (Path 2)
+*   **Módulo 3:** Asincronismo en JavaScript (Path 3)
+*   **Módulo 4:** Hooks de React (Path 4)
+*   **Módulo 5:** MongoDB Atlas - Configuración y Primeros Pasos (Path 5)
+*   **Módulo 6:** Comandos Esenciales de Terminal y Navegación (Path 6)
+
 ### Módulo 1: Contextos Delimitados (Path 1)
 *   **Objetivo:** Dominar los conceptos del diseño estratégico como los Contextos Delimitados y la organización de equipos.
 *   **Descripción:** Este módulo profundiza en el concepto más importante del diseño estratégico de DDD: el Contexto Delimitado (Bounded Context). El objetivo es que dejes de ver los microservicios como simples contenedores de código y los entiendas como fronteras lingüísticas y de modelo.
@@ -267,6 +291,17 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ## Día 3: Tecnologías de Datos y Herramientas
 
+### Introducción del Día
+
+Hoy es un día de acción y herramientas. El objetivo es que instales y utilices las tecnologías clave de nuestro ecosistema. Generarás tu primer microservicio con el CLI de NebulaE, un hito importante en tu aprendizaje. Profundizarás en el estilo de programación declarativa que favorecemos y te introducirás a la gestión de estado global en el frontend con Redux. Además, te conectarás directamente a tu base de datos usando la shell de MongoDB y mejorarás tu dominio de la terminal con herramientas de búsqueda potentes. Se espera que al final del día te sientas cómodo generando código y manipulando datos desde la línea de comandos.
+
+Hoy te enfocarás en los siguientes módulos:
+*   **Módulo 1:** Instalación del Entorno y Generación de Primer Microservicio (Path 2)
+*   **Módulo 2:** Programación Declarativa vs Imperativa (Path 3)
+*   **Módulo 3:** Introducción a Redux - Conceptos Fundamentales (Path 4)
+*   **Módulo 4:** Conexión a MongoDB usando MongoDB Shell (Path 5)
+*   **Módulo 5:** Manipulación y Búsqueda de Texto con grep y find (Path 6)
+
 ### Módulo 1: Instalación del Entorno y Generación de Primer Microservicio (Path 2)
 *   **Objetivo:** Instalar el entorno de desarrollo de NebulaE y generar el primer microservicio desde cero.
 *   **Descripción:** Este es el módulo donde todo lo aprendido hasta ahora converge en una acción concreta. El objetivo es instalar la interfaz de línea de comandos (CLI) de NebulaE y usarla para generar tu primer microservicio.
@@ -371,9 +406,19 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 
 ## Día 4: Integración y Conexiones
 
+### Introducción del Día
+
+El cuarto día se centra en conectar las piezas. El objetivo es que integres las diferentes tecnologías que has aprendido para construir flujos de datos funcionales. Hoy harás que tu backend en Node.js se comunique con la base de datos de MongoDB y que tu frontend en React se integre con Redux para una gestión de estado robusta. Profundizarás en la programación funcional, un paradigma clave en nuestro estilo de código, y aprenderás a crear potentes cadenas de comandos en la terminal. Se espera que hoy logres una visión más clara de cómo las diferentes capas de la arquitectura interactúan entre sí.
+
+Hoy te enfocarás en los siguientes módulos:
+*   **Módulo 1:** Métodos Funcionales en JavaScript (Path 3)
+*   **Módulo 2:** React Redux Integración (Path 4)
+*   **Módulo 3:** Conexión MongoDB desde Node.js (Path 5)
+*   **Módulo 4:** Encadenamiento de Comandos y Redirección (Path 6)
+
 ### Módulo 1: Métodos Funcionales en JavaScript (Path 3)
 *   **Objetivo:** Profundizar en programación funcional y métodos de Array.
-*   **Descripción:** Este módulo es una inmersión profunda en el paradigma de programación funcional en JavaScript. El objetivo es que no solo uses `.map` o `.filter`, sino que entiendas los principios subyacentes y puedas componer funciones complejas para manipular datos de manera elegante y predecible.
+*   **Descripción:** Este módulo es una inmersión profunda en el paradigma de programación funcional en JavaScript. El objetivo es que no solo uses `.map` o `.filter`, sino que entiendas los principios subyacentes y puedas componer funciones complexas para manipular datos de manera elegante y predecible.
 
     Los **recursos de MDN y freeCodeCamp** te guiarán a través de:
 
@@ -383,7 +428,7 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
         *   **Inmutabilidad:** La práctica de no modificar los datos existentes, sino crear nuevas estructuras de datos con los valores actualizados. Esto es fundamental para la previsibilidad del estado (y es por eso que Redux lo exige).
         *   **Funciones de Orden Superior (Higher-Order Functions):** Funciones que toman otras funciones como argumentos o las devuelven como resultado (`map`, `filter` y `reduce` son ejemplos perfectos).
 
-    Los **videos** te mostrarán cómo refactorizar código imperativo a un estilo funcional. Tu objetivo es empezar a "pensar en flujos de datos". En lugar de "hacer un bucle y cambiar cosas", pensarás en "tomar estos datos, filtrarlos, luego transformarlos, y finalmente calcular un resultado". Al final, deberías ser capaz de escribir transformaciones de datos complejas usando la composición de funciones puras.
+    Los **videos** te mostrarán cómo refactorizar código imperativo a un estilo funcional. Tu objetivo es empezar a "pensar en flujos de datos". En lugar de "hacer un bucle y cambiar cosas", pensarás en "tomar estos datos, filtrarlos, luego transformarlos, y finalmente calcular un resultado". Al final, deberías ser capaz de escribir transformaciones de datos complexas usando la composición de funciones puras.
 *   **Recursos Web:**
     *   **Métodos de Array (MDN):**
         * [Array.prototype.map() - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) (1h)
@@ -464,6 +509,17 @@ Esta semana establece los **fundamentos conceptuales y técnicos** necesarios pa
 ---
 
 ## Día 5: Consolidación y Práctica Integral
+
+### Introducción del Día
+
+Llegamos al último día de la semana, dedicado a consolidar y aplicar todo lo aprendido. El objetivo es que conectes todos los conceptos a través de prácticas integrales que simulan el trabajo diario de un desarrollador en NebulaE. Refinarás tus conocimientos de JavaScript, construirás un componente de React con estado global, realizarás operaciones en MongoDB desde múltiples interfaces y darás tus primeros pasos en la automatización de tareas. Se espera que al final del día tengas una visión holística del ecosistema y puedas articular cómo cada tecnología contribuye a la solución final.
+
+Hoy te enfocarás en los siguientes módulos:
+*   **Módulo 1:** Conceptos Avanzados de JavaScript (Path 3)
+*   **Módulo 2:** Práctica Integral React (Path 4)
+*   **Módulo 3:** Práctica Integral MongoDB (Path 5)
+*   **Módulo 4:** Configuración Completa del Entorno (Path 6)
+*   **Módulo 5:** Integración de Conocimientos
 
 ### Módulo 1: Conceptos Avanzados de JavaScript (Path 3)
 *   **Objetivo:** Consolidar conocimientos de JavaScript con conceptos de igualdad y valores falsy.
