@@ -206,8 +206,16 @@ Hoy te enfocarás en los siguientes módulos:
     *   `playground`: Un espacio aislado para que puedas experimentar con los componentes de tu microservicio sin afectar la aplicación principal.
 
     Tu tarea es navegar por esta estructura y entender el flujo de una petición. ¿Dónde se define una ruta de la API? ¿Cómo invoca un comando en el backend? ¿Dónde se guarda un evento? Al final, deberías poder explicar el rol de cada carpeta y cómo se relacionan entre sí para implementar los patrones de CQRS y Event Sourcing.
-*   **Recursos Web:** Documentación interna de estructura de proyectos
-*   **Videos:** "Estructura y Arquitectura de un Microservicio NebulaE" (1h)
+*   **Recursos Web:**
+    *   [npm: @nebulae/cli](https://www.npmjs.com/package/@nebulae/cli)
+    *   [GitHub: nebulae-university/repositories](https://github.com/orgs/nebulae-university/repositories)
+    *   [Nebulae Microservice Anatomy Overview](https://github.com/nebulae-university/software-development/blob/main/documents/nebulae_microservice_anatomy_overview.md)
+    *   [Architecture Benchmark Analysis: Gemini](https://github.com/nebulae-university/software-development/blob/main/documents/architecture_benchmark_analysis_gemini.md)
+    *   [Architecture Benchmark Analysis: Sonnet](https://github.com/nebulae-university/software-development/blob/main/documents/architecture_benchmark_analysis_sonnet.md)
+    *   [Micro-frontends Pattern: Server-side page fragment composition](https://microservices.io/patterns/ui/server-side-page-fragment-composition.html)
+    *   [Micro-frontends in Action: Chapter 4](https://livebook.manning.com/book/micro-frontends-in-action/chapter-4)
+    *   [API Gateway Pattern](https://microservices.io/patterns/apigateway.html)
+*   **Videos:** ["Estructura y Arquitectura de un Microservicio NebulaE"](https://www.youtube.com/watch?v=8XgWmuzcAkE) (1h)
 
 ### Módulo 3: Asincronismo en JavaScript (Path 3)
 *   **Objetivo:** Dominar los patrones de asincronismo de NodeJS.
