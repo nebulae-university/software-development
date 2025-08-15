@@ -87,7 +87,7 @@ Hoy te enfocarás en los siguientes módulos:
     *   [Architecture Overview](https://www.npmjs.com/package/@nebulae/cli#architecture-overview)
     *   [npm: @nebulae/event-store](https://www.npmjs.com/package/@nebulae/event-store)
     *   [npm: @nebulae/backend-node-tools](https://www.npmjs.com/package/@nebulae/backend-node-tools)
-*   **Videos:** [Introducción al Framework NebulaE y sus Componentes]() , [Vista General de Arquitectura](https://www.youtube.com/watch?v=CxbGZhWJDkM) (1h)
+*   **Videos:** [Vista General de Arquitectura](https://www.youtube.com/watch?v=CxbGZhWJDkM) (1h)
 
 ### Módulo 3: Fundamentos de NodeJS (Path 3)
 *   **Objetivo:** Establecer una base sólida en los paradigmas de programación que guían el estilo de código en NebulaE.
@@ -323,8 +323,11 @@ Hoy te enfocarás en los siguientes módulos:
 
     Al final de este módulo, tendrás un esqueleto de microservicio funcional en tu máquina local. Este será el punto de partida para las implementaciones de las próximas semanas.
 *   **Recursos Web:**
-    *   Instalación del CLI de NebulaE
-    *   Comandos de generación de microservicios
+    *   [npm: @nebulae/cli](https://www.npmjs.com/package/@nebulae/cli)
+    *   [Architecture Overview](https://www.npmjs.com/package/@nebulae/cli#architecture-overview)
+    *   [npm: @nebulae/event-store](https://www.npmjs.com/package/@nebulae/event-store)
+    *   [npm: @nebulae/backend-node-tools](https://www.npmjs.com/package/@nebulae/backend-node-tools)
+*   **Videos:** [Instalación del Entorno y Generación de Primer Microservicio](https://youtu.be/MdLlDh7y9kI)
 
 ### Módulo 2: Programación Declarativa vs Imperativa (Path 3)
 *   **Objetivo:** Dominar el estilo de programación declarativa utilizado en NebulaE.
