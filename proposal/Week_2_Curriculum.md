@@ -78,7 +78,7 @@ Hoy te enfocarás en los siguientes módulos:
 
     El objetivo no es realizar un cambio complejo, sino entender el **flujo de desarrollo** y cómo las diferentes partes del microservicio están conectadas. Al final, habrás ganado la confianza para navegar por el código base y realizar cambios de forma autónoma.
 *   **Videos:**
-    *   [Modificación básica FullStack de un µServicio NebulaE](https://www.youtube.com/watch?v=dummy_video) (1h)
+    *   [Modificación básica FullStack de un µServicio NebulaE](https://youtu.be/GC8qjgkX3F8)
 
 ### Módulo 3: Fundamentos de RxJS (Path 3)
 *   **Objetivo:** Comprender los conceptos esenciales de la programación reactiva: `Observable`, `Observer` y `Subscription`.
