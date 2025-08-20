@@ -57,9 +57,10 @@ El plan se divide en 5 semanas, enfocándose en la aplicación práctica de los 
 
 *   **Objetivo:** Implementar la lógica de negocio y la capa de API para una entidad de negocio completa, siguiendo los patrones de DDD y CQRS dentro del framework.
 *   **Recursos y Prácticas:**
-    *   [Generación de un CRUD con NebulaE CLI](https://www.youtube.com/watch?v=dummy_video) (1h) - Aprender a generar el esqueleto de una nueva entidad (schema GraphQL, resolvers, etc.).
+    *   [Modificación básica FullStack de un µServicio NebulaE](https://www.youtube.com/watch?v=dummy_video) (1h) - Aprender a utilizar el esqueleto de una nueva entidad y modificarla utilziando todo el stack de NebulaE.
     *   [Implementación de Lógica de Comandos en el Backend](https://www.youtube.com/watch?v=dummy_video) (2.5h) - Comprender la lógica de negocio para los comandos (Crear, Actualizar, Eliminar) en la capa `backend` usando NodeJS y RxJS.
-    *   [Conexión de Resolvers de GraphQL en la API](https://www.youtube.com/watch?v=dummy_video) (1.5h) - Entender cómo conectar las operaciones de GraphQL con el backend.
+    *   [Conexión API GraphQL con FrontEnd y Backend](https://www.youtube.com/watch?v=dummy_video) (1.5h) - Entender cómo conectar las operaciones de GraphQL con el backend y el FrontEnd.
+    *   [Generación de Nueva Vista FrontEnd](https://www.youtube.com/watch?v=dummy_video) (1.5h) - Entender cómo conectar las operaciones de GraphQL con el backend.
 
 ### Semana 3: Conectando el Frontend
 
