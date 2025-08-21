@@ -197,7 +197,7 @@ Hoy te enfocarás en los siguientes módulos:
 
     El objetivo es que te sientas cómodo escribiendo la lógica de negocio principal de tu servicio. Al final, habrás implementado la lógica para un comando de creación o actualización, sentando las bases para el "write-side" de tu microservicio.
 *   **Videos:**
-    *   [Implementación de Lógica de Comandos en el Backend](https://www.youtube.com/watch?v=dummy_video) (2.5h)
+    *   [Implementación de Lógica de Comandos en el Backend](https://youtu.be/5HiQB8uWhfM) 
 
 ### Módulo 3: Creación de Streams y Hot vs Cold Observables (Path 3)
 *   **Objetivo:** Aprender a crear flujos de datos desde diversas fuentes y entender la diferencia entre observables "fríos" y "calientes".
