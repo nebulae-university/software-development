@@ -475,81 +475,124 @@ Hoy te enfocarás en los siguientes módulos:
 
 ## Día 5: Práctica Integral y Consolidación
 
-### Introducción del Día
+Esta práctica integral tomará lo aprendido en los 6 paths tanto en la Semana 1 como en la Semana 2.
 
-Llegamos al último día de la semana, un día para consolidar todo lo que has aprendido a través de una práctica integral. El objetivo es que conectes todas las piezas: diseñarás un Agregado de DDD, implementarás un flujo completo desde el frontend hasta el backend, construirás un formulario con validación robusta, y orquestarás todo el entorno con Docker Compose. Hoy es el día en que la teoría se convierte en una aplicación funcional y tangible. Se espera que al final del día te sientas con la confianza de poder construir una funcionalidad de negocio completa dentro del ecosistema de NebulaE.
+#### Parte 1: Creación del Microservicio `ms-facts-mng`
 
-Hoy te enfocarás en los siguientes módulos:
-*   **Módulo 1:** Práctica Integral - Diseño de un Agregado (Path 1)
-*   **Módulo 2:** Práctica Integral - Conexión Full-Stack (Path 2)
-*   **Módulo 3:** Práctica Integral - Creación de un Flujo Reactivo (Path 3)
-*   **Módulo 4:** Práctica Integral - Construcción de un Formulario Completo (Path 4)
-*   **Módulo 5:** Práctica Integral - Implementación de un CRUD Completo (Path 5)
-*   **Módulo 6:** Práctica Integral - Orquestación del Entorno (Path 6)
+La primera parte consiste en generar un microservicio completo utilizando las herramientas y conceptos aprendidos.
 
-### Módulo 1: Práctica Integral - Diseño de un Agregado (Path 1)
-*   **Objetivo:** Aplicar los patrones tácticos de DDD para diseñar un Agregado de negocio.
-*   **Descripción:** En esta práctica, tomarás el caso de estudio del catering y diseñarás el Agregado `Pedido`.
-    *   **Práctica Dirigida:**
-        1.  Abre una herramienta de diagramación (como Miro o Excalidraw).
-        2.  Dibuja el **Agregado `Pedido`** con su `Aggregate Root`.
-        3.  Dentro del agregado, identifica qué propiedades deberían ser **Objetos de Valor** (ej: `DireccionEntrega`, `InformacionContacto`). Dibuja estos objetos y sus atributos.
-        4.  Identifica si hay alguna **Entidad** hija dentro del agregado (ej: `ItemPedido`).
-        5.  Define las **invariantes** del agregado (las reglas de negocio que siempre deben ser verdaderas). Por ejemplo: "El número de personas debe ser mayor que cero" o "La fecha de entrega no puede ser en el pasado".
-    *   **Meta a lograr:** Tener un diagrama claro que represente el Agregado `Pedido`, sus componentes internos y las reglas que lo protegen. Este diagrama será la guía para tu implementación en el backend.
+**Objetivos:**
 
-### Módulo 2: Práctica Integral - Conexión Full-Stack (Path 2)
-*   **Objetivo:** Implementar un flujo de datos completo desde el frontend hasta el backend.
-*   **Descripción:** Conectarás el formulario que creaste con la lógica de negocio del backend.
-    *   **Práctica Dirigida:**
-        1.  Asegúrate de que tienes una **mutación de GraphQL** en tu capa `api` para crear o actualizar tu entidad.
-        2.  En el `onSubmit` de tu componente de formulario (Formik), utiliza Apollo Client para **ejecutar esa mutación**, pasando los valores del formulario como variables.
-        3.  En el resolver de la mutación en la capa `api`, asegúrate de que se está **despachando el comando** correcto al backend.
-        4.  En el manejador de comandos del `backend`, añade un `console.log` para verificar que el comando llega con los datos del formulario.
-    *   **Meta a lograr:** Poder rellenar el formulario en la UI, hacer clic en enviar, y ver en la consola de tu servicio de backend que el comando ha sido recibido con los datos correctos.
+1.  **Generar un Microservicio:** Utilizar `@nebulae/cli` para crear un nuevo microservicio.
+    *   **Nombre:** `ms-facts-mng`
+    *   **Agregado:** `shark-attack`
 
-### Módulo 3: Práctica Integral - Creación de un Flujo Reactivo (Path 3)
-*   **Objetivo:** Aplicar tus conocimientos de RxJS para crear un flujo de datos simple.
-*   **Descripción:** Refactorizarás una parte de tu lógica de backend para usar RxJS de manera más explícita.
-    *   **Práctica Dirigida:**
-        1.  Dentro de tu manejador de comandos en el `backend`, identifica la secuencia de operaciones (ej: validar, guardar en DB, publicar evento).
-        2.  Crea un **flujo de RxJS** que modele esta secuencia. Puedes empezar con un `of(command)`.
-        3.  Usa operadores como `mergeMap` para encadenar las operaciones asíncronas (como guardar en la base de datos).
-        4.  Usa el operador `tap` para añadir `console.log` en cada paso del flujo y ver cómo los datos se transforman.
-        5.  Asegúrate de manejar los errores con el operador `catchError`.
-    *   **Meta a lograr:** Tener una lógica de comando en el backend que esté orquestada por un pipeline de RxJS, demostrando tu comprensión de cómo encadenar operadores para manejar flujos asíncronos.
+2.  **Configurar la Entidad `shark-attack`:** Al crear el microservicio, se debe configurar la entidad con los siguientes campos, incluyendo su descripción y traducción al español para el frontend.
 
-### Módulo 4: Práctica Integral - Construcción de un Formulario Completo (Path 4)
-*   **Objetivo:** Construir un formulario funcional y robusto con Material UI, Formik y Yup.
-*   **Descripción:** Unirás todas las piezas del frontend para crear una experiencia de usuario completa para la creación de tu entidad.
-    *   **Práctica Dirigida:**
-        1.  Crea un nuevo componente de página en tu `frontend`.
-        2.  En esta página, renderiza un formulario utilizando **Formik**.
-        3.  Construye los campos del formulario utilizando componentes de **Material UI** (`<TextField>`, `<Select>`, etc.).
-        4.  Crea un esquema de validación detallado con **Yup** que cubra todos los campos del formulario, incluyendo validaciones de tipo, requeridas y de formato.
-        5.  Conecta el esquema de Yup a tu formulario de Formik.
-        6.  Asegúrate de que los mensajes de error se muestren correctamente debajo de cada campo cuando la validación falla.
-    *   **Meta a lograr:** Tener una página en tu aplicación con un formulario completo, visualmente atractivo, que valide la entrada del usuario en tiempo real y solo permita el envío cuando todos los datos son correctos.
+    | Campo                      | Descripción                                  | Traducción al Español   |
+| :------------------------- | :------------------------------------------- | :---------------------- |
+| `date`                     | The date of the incident.                    | fecha                   |
+| `year`                     | The year of the incident.                    | año                     |
+| `type`                     | The type of shark attack.                    | tipo                    |
+| `country`                  | The country where the incident occurred.     | país                    |
+| `area`                     | The specific area where the incident occurred. | área                    |
+| `location`                 | The specific location of the incident.       | ubicación               |
+| `activity`                 | The activity the victim was engaged in.      | actividad               |
+| `name`                     | The name of the victim.                      | nombre                  |
+| `sex`                      | The sex of the victim.                       | sexo                    |
+| `age`                      | The age of the victim.                       | edad                    |
+| `injury`                   | The outcome of the incident.                 | lesión                  |
+| `fatal_y_n`                | Whether the incident was fatal (Y/N).        | fatal_s_n               |
+| `time`                     | The time of the incident.                    | hora                    |
+| `species`                  | The species of shark involved.               | especie                 |
+| `investigator_or_source`   | The investigator or source of the report.    | investigador_o_fuente   |
+| `pdf`                      | The name of the associated PDF file.         | pdf                     |
+| `href_formula`             | The formula for the link to the PDF file.    | formula_enlace          |
+| `href`                     | The direct link to the PDF file.             | enlace                  |
+| `case_number`              | The case number assigned to the incident.    | número_de_caso          |
+| `case_number0`             | An alternative case number for the incident. | número_de_caso_0        |
 
-### Módulo 5: Práctica Integral - Implementación de un CRUD Completo (Path 5)
-*   **Objetivo:** Implementar y probar las cuatro operaciones CRUD desde tu aplicación Node.js.
-*   **Descripción:** Crearás una pequeña aplicación de consola o un conjunto de scripts para interactuar con tu base de datos, demostrando tu dominio del driver de MongoDB.
-    *   **Práctica Dirigida:**
-        1.  Crea un nuevo archivo `test-db.js` en la raíz de tu proyecto.
-        2.  En este archivo, importa el driver de MongoDB y establece la conexión a tu base de datos de Atlas.
-        3.  Escribe y exporta cuatro funciones `async`: `createEntity`, `readEntity`, `updateEntity`, y `deleteEntity`.
-        4.  Implementa cada función para que realice la operación CRUD correspondiente en tu colección.
-        5.  Llama a estas funciones en secuencia para probar el ciclo de vida completo: crea una entidad, léela, actualízala y finalmente elimínala. Usa `console.log` para mostrar los resultados de cada paso.
-    *   **Meta a lograr:** Poder ejecutar `node test-db.js` y ver en la consola la prueba exitosa de las cuatro operaciones CRUD contra tu base de datos en la nube.
+3.  **Desarrollar Vistas de Frontend:**
+    *   **Vista de Listado (Tabla):** Debe mostrar las columnas: `date`, `country`, `type`, y `species`.
+    *   **Vista de Detalle (Formulario):** Debe incluir todos los campos definidos anteriormente, permitiendo la creación y edición de un `shark-attack`.
 
-### Módulo 6: Práctica Integral - Orquestación del Entorno (Path 6)
-*   **Objetivo:** Utilizar Docker Compose para levantar y gestionar todo el entorno de desarrollo local.
-*   **Descripción:** Aplicarás tus conocimientos de Docker Compose para gestionar la aplicación completa.
-    *   **Práctica Dirigida:**
-        1.  Navega al directorio que contiene tu archivo `docker-compose.yml` (`integrated-local-environment`).
-        2.  Ejecuta `docker-compose up -d` para levantar todos los servicios en segundo plano.
-        3.  Usa `docker-compose ps` para verificar que todos los contenedores (tu microservicio, la base de datos, etc.) están en ejecución.
-        4.  Usa `docker-compose logs -f <nombre-del-servicio>` para ver los logs de tu microservicio en tiempo real.
-        5.  Realiza una acción en el frontend (como enviar el formulario de tu práctica integral) y observa los logs del backend para ver la traza de la petición.
-        6.  Cuando termines, usa `docker-compose down` para detener y eliminar todos los contenedores.
-    *   **Meta a lograr:** Sentirte cómodo utilizando los comandos de Docker Compose para gestionar el ciclo de vida completo de tu entorno de desarrollo local, incluyendo la visualización de logs para la depuración.
+**Resultado Esperado:** Al finalizar esta parte, el desarrollador tendrá un microservicio funcional donde podrá crear, ver y editar un nuevo caso de `shark-attack`.
+
+---
+
+#### Parte 2: Importación Masiva de Datos
+
+En esta fase, se añadirá la capacidad de importar datos desde una fuente externa.
+
+**Objetivos:**
+
+1.  **Botón de Importación:** En la página de listado, agregar un botón con el texto "IMPORTAR".
+
+2.  **Comando de Backend:** Al presionar el botón, se debe invocar un comando en el backend (`importSharkAttacks`) a través de la API del gateway.
+
+3.  **Lógica de Importación:**
+    *   El comando `importSharkAttacks` debe realizar una llamada GET al API de `opendatasoft` para obtener 100 casos de ataques de tiburones.
+        *   **URL del API:** `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?limit=100`
+    *   Por cada registro importado:
+        *   Utilizar el campo `original_order` del API como `_id` del documento en la base de datos.
+        *   Guardar el registro en la base de datos (MongoDB).
+        *   Generar un evento de Event Sourcing con `AggregateType=SharkAttact` y `EventType=Reported`.
+
+4.  **Actualización del Frontend:** Una vez que el comando finalice exitosamente, el frontend debe actualizar el listado para mostrar los 100 nuevos registros importados.
+
+**Resultado Esperado:** El usuario podrá poblar la base de datos con datos reales de forma masiva y verlos reflejados inmediatamente en la interfaz.
+
+---
+
+#### Parte 3: Consulta de Datos Relacionados
+
+Finalmente, se enriquecerá la vista de detalle con información contextual.
+
+**Objetivos:**
+
+1.  **Botón de Consulta:** En el formulario de detalle de un `shark-attack`, agregar un nuevo botón para "Consultar más casos en [País]".
+
+2.  **Lógica de Backend:**
+    *   Al presionar el botón, el frontend realizará una petición al backend.
+    *   El backend consultará el API de `opendatasoft`, filtrando por el país del `sharkAttack` que se está visualizando, para obtener cinco (5) casos adicionales.
+        *   **Ejemplo de URL (filtrando por Egipto):** `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/global-shark-attack/records?where=country%3D%27EGYPT%27&limit=5`
+
+3.  **Visualización en Frontend:**
+    *   Mientras la consulta está en curso, se debe mostrar un indicador de progreso (loading bar).
+    *   Al recibir la respuesta, mostrar la información de los 5 casos como una lista de texto simple en la misma página de detalle.
+    * utilizar un delay (RxJS) de un segundo para poder apreciar el indicador de progreso.
+
+
+**Resultado Esperado:** El usuario podrá obtener datos relacionados y contextuales directamente desde la vista de detalle, mejorando la experiencia de usuario y la utilidad de la aplicación.
+
+---
+
+### Forma de Entrega
+
+El desarrollador deberá proporcionar la URL de su repositorio público en Github/Gitlab/Bitbucket que contiene el microservicio `ms-facts-mng`. El proceso de evaluación seguirá los siguientes pasos:
+
+1.  **Descarga y Configuración:** Se clonará el repositorio y se ejecutarán los comandos de `compose` para el `frontend` y la `api`.
+2.  **Levantamiento del Entorno:** Se utilizará `docker-compose up` para iniciar toda la infraestructura local.
+3.  **Inicio del Backend:** Se iniciará el proceso del backend del microservicio.
+4.  **Prueba Funcional (Parte 1):** Se verificará la capacidad de crear, visualizar y editar un `SharkAttack` a través de la interfaz de usuario.
+5.  **Prueba de Importación (Parte 2):** Se presionará el botón "IMPORTAR" y se validará que los 100 registros se listen correctamente.
+6.  **Prueba de Consulta Relacionada (Parte 3):** Se entrará al detalle de un `SharkAttack` importado y se probará la funcionalidad de consultar los 5 casos adicionales en el mismo país.
+
+### Criterios de Evaluación
+
+La evaluación se basará en una puntuación máxima de 100 puntos, distribuidos de la siguiente manera:
+
+| Criterio | Puntos | Descripción de la Evaluación |
+| :--- | :--- | :--- |
+| **Parte 1: Creación del Microservicio** | **(40 Puntos)** | |
+| Generación del Microservicio | 10 | Se verifica que el microservicio `ms-facts-mng` y el agregado `shark-attack` fueron generados correctamente con las herramientas del framework. |
+| Configuración de la Entidad | 15 | Todos los campos especificados para `shark-attack` están presentes y funcionales en el formulario de detalle y la lógica de negocio. Las traducciones son correctas. |
+| Funcionalidad CRUD | 15 | La aplicación permite crear, editar y visualizar un `SharkAttack`. La vista de listado muestra las columnas correctas (`date`, `country`, `type`, `species`). |
+| **Parte 2: Importación Masiva de Datos** | **(35 Puntos)** | |
+| UI y Ejecución del Comando | 10 | El botón "IMPORTAR" está presente en el listado y desencadena correctamente el comando `importSharkAttacks` en el backend. |
+| Lógica de Importación | 15 | El backend consume el API externa, obtiene 100 registros y los persiste correctamente en MongoDB usando `original_order` como `_id`. |
+| Event Sourcing | 10 | Por cada registro importado, se genera y persiste un evento de dominio (`AggregateType=SharkAttact`, `EventType=Reported`). |
+| **Parte 3: Consulta de Datos Relacionados** | **(25 Puntos)** | |
+| UI y Ejecución del Comando | 10 | El botón de consulta de casos relacionados está presente en la vista de detalle y desencadena la lógica correspondiente en el backend. |
+| Lógica de Consulta y Visualización | 15 | El backend consulta el API externa con el filtro de país y límite correctos. El frontend muestra un `loading` (con un `delay` perceptible) y luego presenta los 5 resultados. |
+| **TOTAL** | **100 Puntos** | |
