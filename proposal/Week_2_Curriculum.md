@@ -404,7 +404,7 @@ Hoy te enfocarás en los siguientes módulos:
 
     Tu objetivo es añadir estos operadores a tus flujos de RxJS. Usa `tap` para depurar, `delay` para simular una carga lenta, y `timeout` para hacer tus flujos más robustos.
 *   **Recursos Web:**
-    *   [Operador `tap` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/tap) (1h)
+    *   [Operador `tap` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/do) (1h)
     *   [Operador `delay` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/delay) (0.5h)
     *   [Operador `timeout` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/timeout) (0.5h)
     *   [Operador `toPromise` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/topromise) (0.5h)
