@@ -390,7 +390,7 @@ Hoy te enfocarás en los siguientes módulos:
 
     Tu objetivo es entender el flujo de datos del "read-side" de la arquitectura CQRS. Al final, serás capaz de crear un nuevo componente de React que consulte y muestre la información de tu entidad de negocio.
 *   **Videos:**
-    *   [Generación de Nueva Vista FrontEnd](https://www.youtube.com/watch?v=dummy_video) (1.5h)
+    *   [Generación de Nueva Vista FrontEnd](https://youtu.be/9M1GhET8kC0)
 
 ### Módulo 2: Operadores de Utilidad en RxJS (Path 3)
 *   **Objetivo:** Aprender a usar operadores de utilidad para depuración y control de flujos.
