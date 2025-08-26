@@ -296,7 +296,7 @@ Hoy te enfocarás en los siguientes módulos:
 
     Tu objetivo es entender este patrón de delegación. La API define el "qué" (las operaciones disponibles), y el backend implementa el "cómo" (la lógica de negocio real). Al final, deberías poder explicar cómo una mutación de GraphQL desencadena la ejecución de un comando en el backend de tu microservicio.
 *   **Videos:**
-    *   [Conexión API GraphQL con FrontEnd y Backend](https://www.youtube.com/watch?v=dummy_video) (1.5h)
+    *   [Conexión API GraphQL con FrontEnd y Backend](https://youtu.be/PIptkzY6TFk)
 
 ### Módulo 2: Subjects en RxJS y Utilidad en Node.js (Path 3)
 *   **Objetivo:** Comprender el uso de Subjects y la relevancia de RxJS en el backend.
