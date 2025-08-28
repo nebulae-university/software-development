@@ -40,25 +40,27 @@ Como complemento fundamental a las lecturas, se recomienda seguir la siguiente l
 
 ### Semana 1: Fundamentos de Domain-Driven Design (DDD)
 
-*   **Objetivo:** Comprender la filosofía de DDD, su importancia para el negocio y dominar los conceptos del diseño estratégico como el Lenguaje Ubicuo, los Contextos Delimitados y la organización de equipos.
-*   **Lecturas y Videos:**
-    *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h) - Lectura fundamental sobre cómo usar el análisis de dominio para modelar y definir los límites de los microservicios.
-    *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h) - Explica cómo la estructura de los equipos influye en la arquitectura y promueve la autonomía.
-    *   [Video: The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h) - Charla fundamental para aprender a identificar los límites de los contextos de negocio.
-    *   [Video: Hexagonal, Onion & Clean Architecture](https://www.youtube.com/watch?v=JubdZIdLQ4M) (15min) - Conceptos base de arquitecturas limpias.
-    *   [Video: Microservices vs Monolithic Architecture](https://www.youtube.com/watch?v=6-Wu178sOEE) (10min) - Comparativa fundamental de estilos arquitectónicos.
-    *   [Video: DDD Bounded Contexts & Subdomains](https://www.youtube.com/watch?v=NvBsEnDgA4o) (12min) - Visualización de los conceptos clave de DDD.
-    *   [Video: Conway’s Law](https://www.youtube.com/watch?v=TqhkWaeUN_8) (8min) - Entendiendo cómo la estructura del equipo moldea la arquitectura.
-    *   [Video: Boundaries & Encapsulation](https://www.youtube.com/watch?v=EBO0ysJr2BA) (10min) - Principios para el diseño de componentes y servicios.
+*   **Objetivo:** Comprender la filosofía de Domain-Driven Design (DDD) y su importancia para el negocio. El desarrollador dominará los conceptos del diseño estratégico, incluyendo el Lenguaje Ubicuo, el Análisis de Dominio y la identificación de Contextos Delimitados (Bounded Contexts) como pilar para el diseño de microservicios. Se introducirán los principios de arquitecturas limpias y la influencia de la estructura organizacional (Ley de Conway) en el software.
+*   **Recursos y Prácticas:**
+    *   [Análisis de dominio en una arquitectura de microservicios (Microsoft Docs)](https://learn.microsoft.com/es-es/azure/architecture/microservices/model/domain-analysis) (1.5h)
+    *   [Patrón: Servicio por Equipo (microservices.io)](https://microservices.io/patterns/decomposition/service-per-team.html) (1h)
+    *   [Bounded Context - Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html) (1h)
+    *   [Video: The Art of Discovering Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=ez9GWESKG4I) (1h)
+    *   [Video: Hexagonal, Onion & Clean Architecture](https://www.youtube.com/watch?v=JubdZIdLQ4M) (15min)
+    *   [Video: Microservices vs Monolithic Architecture](https://www.youtube.com/watch?v=6-Wu178sOEE) (10min)
+    *   [Video: DDD Bounded Contexts & Subdomains](https://www.youtube.com/watch?v=NvBsEnDgA4o) (12min)
+    *   [Video: Conway’s Law](https://www.youtube.com/watch?v=TqhkWaeUN_8) (8min)
+    *   [Video: Boundaries & Encapsulation](https://www.youtube.com/watch?v=EBO0ysJr2BA) (10min)
+    *   [Video: DDD and Microservices: At Last, Some Boundaries! - Eric Evans](https://www.youtube.com/watch?v=yPvef9R3k-M) (50min)
 
 ### Semana 2: Patrones Tácticos de DDD y Aislamiento de Datos
 
-*   **Objetivo:** Diseñar el interior de un microservicio, modelando su lógica de negocio con los patrones tácticos de DDD y garantizando la encapsulación y persistencia de sus datos.
-*   **Lecturas y Videos:**
-    *   [Identificando los bloques de construcción de DDD (Microsoft Docs)](https://docs.microsoft.com/es-es/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model) (2h) - Una guía detallada que cubre Entidades, Objetos de Valor y, fundamentalmente, el patrón Agregado.
-    *   [Patrón: Base de Datos por Servicio (microservices.io)](https://microservices.io/patterns/data/database-per-service.html) (1h) - Explica por qué cada servicio debe tener su propia base de datos para asegurar un bajo acoplamiento.
-    *   [Video: Dissecting Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=zkRfDw0N4W8) (1h) - Charla avanzada sobre los diferentes tipos de contextos, sus relaciones y patrones de evolución.
-    *   [Video: DDD Building Blocks](https://www.youtube.com/watch?v=xFl-QQZJFTA) (18min) - Un repaso visual a los patrones tácticos de DDD.
+*   **Objetivo:** Diseñar el interior de un microservicio modelando su lógica de negocio con los patrones tácticos de DDD. El desarrollador aprenderá a identificar y definir Entidades, Objetos de Valor y, fundamentalmente, Agregados (Aggregates) como barreras transaccionales. Se reforzará el principio de autonomía de los servicios a través del patrón de Base de Datos por Servicio para garantizar un bajo acoplamiento.
+*   **Recursos y Prácticas:**
+    *   [Identificando los bloques de construcción de DDD (Microsoft Docs)](https://docs.microsoft.com/es-es/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model) (2h)
+    *   [Patrón: Base de Datos por Servicio (microservices.io)](https://microservices.io/patterns/data/database-per-service.html) (1h)
+    *   [Video: Dissecting Bounded Contexts (Nick Tune)](https://www.youtube.com/watch?v=zkRfDw0N4W8) (1h)
+    *   [Video: DDD Building Blocks](https://www.youtube.com/watch?v=xFl-QQZJFTA) (18min)
 
 ### Semana 3: Implementando DDD con CQRS y Event Sourcing
 

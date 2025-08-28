@@ -43,29 +43,33 @@ El plan se divide en 5 semanas, progresando desde los fundamentos de React hasta
 
 ### Semana 1: Fundamentos de React y Componentes
 
-*   **Objetivo:** Comprender los conceptos básicos de React, cómo crear componentes funcionales y utilizar los hooks esenciales para manejar el estado y los efectos secundarios.
+*   **Objetivo:** Construir una base sólida en React y la gestión de estado. El desarrollador aprenderá a crear componentes funcionales, manejar el estado local con los hooks `useState` y `useEffect`, y comprenderá los principios del estado global con Redux (Store, Actions, Reducers). La semana culmina con la integración de React y Redux para leer estado y despachar acciones desde los componentes.
 *   **Recursos y Prácticas:**
-    *   [Introducción a React (React.dev)](https://react.dev/learn) (2h) - La documentación oficial es el mejor punto de partida para entender los componentes, JSX y el renderizado.
-    *   [Introducción a React (componentes, props, estado, fetching)](https://www.youtube.com/watch?v=LDB4uaJ87e0) (1h)
-    *   [Hooks: `useState` y `useEffect` (React.dev)](https://react.dev/reference/react/useState) (1.5h) - Guías detalladas sobre cómo añadir estado a los componentes funcionales y manejar efectos secundarios.
-    *   [Introducción a Hooks – useState y useEffect](https://www.youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=P5p3vMeJ6LQ) (0.5h)
-    *   [useState en 15 minutos (React Hooks explicados)](https://www.youtube.com/watch?v=O6P86uwfdR0) (0.25h)
-    *   [Redux: Conceptos Fundamentales (Redux.js.org)](https://redux.js.org/introduction/getting-started) (1.5h) - Introducción a los principios de Redux: Store, Actions, Reducers.
-    *   [React Redux: Conectando Redux con React (React-Redux.js.org)](https://react-redux.js.org/introduction/getting-started) (1h) - Cómo usar `Provider`, `useSelector` y `useDispatch` para integrar Redux en componentes de React.
-    *   [Crash Course React completo](https://www.youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=CgkZ7MvWUAA) (2h)
+    *   [Introducción a React (React.dev)](https://react.dev/learn) (2h)
+    *   [Hooks: `useState` y `useEffect` (React.dev)](https://react.dev/reference/react/useState) (1.5h)
+    *   [Redux: Conceptos Fundamentales (Redux.js.org)](https://redux.js.org/introduction/getting-started) (1.5h)
+    *   [React Redux: Conectando Redux con React (React-Redux.js.org)](https://react-redux.js.org/introduction/getting-started) (1h)
+    *   **Videos:**
+        *   [Introducción a React (componentes, props, estado, fetching)](https://www.youtube.com/watch?v=LDB4uaJ87e0) (1h)
+        *   [Introducción a Hooks – useState y useEffect](https://www.youtube.com/watch?v=P5p3vMeJ6LQ) (0.5h)
+        *   [useState en 15 minutos](https://www.youtube.com/watch?v=O6P86uwfdR0) (0.25h)
+        *   [Redux Tutorial](https://www.youtube.com/watch?v=poQXNp9ItL4) (1.75h)
+        *   [Crash Course React completo](https://www.youtube.com/watch?v=CgkZ7MvWUAA) (2h)
 
 ### Semana 2: Estilizado y Formularios
 
-*   **Objetivo:** Aprender a estilizar componentes con bibliotecas de UI y a construir formularios robustos con validación.
+*   **Objetivo:** Dominar la construcción de interfaces de usuario y formularios robustos en React. El desarrollador aprenderá a estilizar componentes utilizando la librería de componentes Material UI y el framework utility-first Tailwind CSS. Se enfocará en la creación de formularios complejos, manejando su estado con Formik y aplicando validaciones a prueba de errores mediante esquemas definidos con Yup.
 *   **Recursos y Prácticas:**
-    *   [Introducción a Material UI (MUI.com)](https://mui.com/material-ui/getting-started/overview/) (1.5h) - Guía para empezar a usar la biblioteca de componentes de Material Design.
-    *   [Curso React con Tailwind, Redux y MUI](https://www.youtube.com/watch?v=LdomMuzp6jM)
-    *   [Formularios con Material UI y Formik](https://www.youtube.com/watch?v=MV9NC3FoCmM)
-    *   [Formularios con Material UI, Formik y Yup](https://www.youtube.com/watch?v=aeU2nU45sw4)
-    *   [Guía de Tailwind CSS (Tailwindcss.com)](https://tailwindcss.com/docs) (1.5h) - Documentación oficial para el framework CSS utility-first.
-    *   [Formik: Construyendo Formularios en React (Formik.org)](https://formik.org/docs/overview) (2h) - Tutorial oficial para manejar el estado de formularios, validación y envío.
-    *   [Yup: Validación de Esquemas (GitHub)](https://github.com/jquense/yup) (1h) - Documentación para definir esquemas de validación de datos.
-    *   [Validación de formularios con Yup](https://www.youtube.com/watch?v=RQ1E2EjyqY4)
+    *   [Introducción a Material UI (MUI.com)](https://mui.com/material-ui/getting-started/overview/) (1.5h)
+    *   [Guía de Tailwind CSS (Tailwindcss.com)](https://tailwindcss.com/docs) (1.5h)
+    *   [Formik: Construyendo Formularios en React (Formik.org)](https://formik.org/docs/overview) (2h)
+    *   [Yup: Validación de Esquemas (GitHub)](https://github.com/jquense/yup) (1h)
+    *   **Videos:**
+        *   [React Material UI Tutorial](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO)
+        *   [Curso React con Tailwind, Redux y MUI](https://www.youtube.com/watch?v=LdomMuzp6jM)
+        *   [Formularios con Material UI y Formik](https://www.youtube.com/watch?v=MV9NC3FoCmM)
+        *   [Formularios con Material UI, Formik y Yup](https://www.youtube.com/watch?v=aeU2nU45sw4)
+        *   [Validación de formularios con Yup](https://www.youtube.com/watch?v=RQ1E2EjyqY4)
 
 ### Semana 3: Fetching de Datos y Gestión de Estado Local
 

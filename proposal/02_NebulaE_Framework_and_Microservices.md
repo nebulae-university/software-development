@@ -46,29 +46,41 @@ El plan se divide en 5 semanas, enfocándose en la aplicación práctica de los 
 
 ---
 
-### Semana 1: "Hola Mundo" con NebulaE
+### Semana 1: Inmersión en el Ecosistema NebulaE: Arquitectura y Primer Microservicio
 
-*   **Objetivo:** Instalar el entorno de desarrollo de NebulaE, generar un microservicio desde cero y comprender su estructura de carpetas fundamental.
+*   **Objetivo:** El desarrollador se sumergirá en la arquitectura y filosofía del framework NebulaE, estudiando sus herramientas clave como `@nebulae/cli` y `@nebulae/event-store`. Comprenderá la anatomía de un microservicio, los patrones de diseño subyacentes como CQRS y Event Sourcing, y la composición de micro-frontends. La semana culmina con la instalación completa del entorno de desarrollo y la generación de un microservicio funcional, estableciendo una base sólida para el desarrollo práctico.
 *   **Recursos y Prácticas:**
-    *   [Creación de tu Primer Microservicio con NebulaE CLI](https://www.youtube.com/watch?v=dummy_video) (1h) - Comprender cómo generar un nuevo servicio y levantarlo con el `integrated-local-environment`.
-    *   [Estructura y Arquitectura de un Microservicio NebulaE](https://www.youtube.com/watch?v=dummy_video) (1h) - Entender el propósito de las carpetas `frontend`, `api`, `backend`, `deployment` y `playground`.
+    *   [npm: @nebulae/cli](https://www.npmjs.com/package/@nebulae/cli)
+    *   [Architecture Overview](https://www.npmjs.com/package/@nebulae/cli#architecture-overview)
+    *   [npm: @nebulae/event-store](https://www.npmjs.com/package/@nebulae/event-store)
+    *   [npm: @nebulae/backend-node-tools](https://www.npmjs.com/package/@nebulae/backend-node-tools)
+    *   [GitHub: nebulae-university/repositories](https://github.com/orgs/nebulae-university/repositories)
+    *   [Nebulae Microservice Anatomy Overview](https://github.com/nebulae-university/software-development/blob/main/documents/nebulae_microservice_anatomy_overview.md)
+    *   [Architecture Benchmark Analysis: Gemini](https://github.com/nebulae-university/software-development/blob/main/documents/architecture_benchmark_analysis_gemini.md)
+    *   [Architecture Benchmark Analysis: Sonnet](https://github.com/nebulae-university/software-development/blob/main/documents/architecture_benchmark_analysis_sonnet.md)
+    *   [Micro-frontends Pattern: Server-side page fragment composition](https://microservices.io/patterns/ui/server-side-page-fragment-composition.html)
+    *   [Micro-frontends in Action: Chapter 4](https://livebook.manning.com/book/micro-frontends-in-action/chapter-4)
+    *   [API Gateway Pattern](https://microservices.io/patterns/apigateway.html)
+    *   [Video: Vista General de Arquitectura](https://www.youtube.com/watch?v=CxbGZhWJDkM) (1h)
+    *   [Video: Estructura y Arquitectura de un Microservicio NebulaE](https://www.youtube.com/watch?v=8XgWmuzcAkE) (1h)
+    *   [Video: Instalación del Entorno y Generación de Primer Microservicio](https://youtu.be/MdLlDh7y9kI)
 
-### Semana 2: Desarrollando una Entidad de Negocio (Backend)
+### Semana 2: Construcción Full-Stack de una Entidad de Negocio
 
-*   **Objetivo:** Implementar la lógica de negocio y la capa de API para una entidad de negocio completa, siguiendo los patrones de DDD y CQRS dentro del framework.
+*   **Objetivo:** El desarrollador aplicará los patrones de NebulaE para construir una funcionalidad de negocio completa. Aprenderá a modificar el esqueleto de una entidad, implementar la lógica de negocio de los Comandos en el backend con NodeJS y RxJS, conectar las mutaciones y queries de la API de GraphQL con la lógica del backend, y generar las vistas de frontend en React para interactuar con la nueva entidad. Esta semana se enfoca en el flujo de desarrollo completo, desde la lógica de negocio hasta la interfaz de usuario.
 *   **Recursos y Prácticas:**
-    *   [Modificación básica FullStack de un µServicio NebulaE](https://www.youtube.com/watch?v=dummy_video) (1h) - Aprender a utilizar el esqueleto de una nueva entidad y modificarla utilziando todo el stack de NebulaE.
-    *   [Implementación de Lógica de Comandos en el Backend](https://www.youtube.com/watch?v=dummy_video) (2.5h) - Comprender la lógica de negocio para los comandos (Crear, Actualizar, Eliminar) en la capa `backend` usando NodeJS y RxJS.
-    *   [Conexión API GraphQL con FrontEnd y Backend](https://www.youtube.com/watch?v=dummy_video) (1.5h) - Entender cómo conectar las operaciones de GraphQL con el backend y el FrontEnd.
-    *   [Generación de Nueva Vista FrontEnd](https://www.youtube.com/watch?v=dummy_video) (1.5h) - Entender cómo conectar las operaciones de GraphQL con el backend.
+    *   [Video: Modificación básica FullStack de un µServicio NebulaE](https://youtu.be/GC8qjgkX3F8)
+    *   [Video: Implementación de Lógica de Comandos en el Backend](https://youtu.be/5HiQB8uWhfM)
+    *   [Video: Conexión API GraphQL con FrontEnd y Backend](https://youtu.be/PIptkzY6TFk)
+    *   [Video: Generación de Nueva Vista FrontEnd](https://youtu.be/9M1GhET8kC0)
 
-### Semana 3: Conectando el Frontend
+### Semana 3: Conectando Frontend y Backend
 
-*   **Objetivo:** Construir una interfaz de usuario funcional en React para interactuar con la nueva entidad de negocio, consumiendo la API de GraphQL.
+*   **Objetivo:** Profundizar en la implementación de los patrones de NebulaE tanto en el frontend como en el backend. El desarrollador comprenderá la arquitectura de componentes de la UI, incluyendo la gestión de estado con `Redux` y `useState`. Simultáneamente, implementará la lógica de negocio principal en el backend, utilizando RxJS para orquestar los flujos de CQRS y Event Sourcing, y conectando la capa de GraphQL con MongoDB para el procesamiento avanzado de datos.
 *   **Recursos y Prácticas:**
-    *   [Guía de Frontend en NebulaE](https://www.youtube.com/watch?v=dummy_video) (1h) - Entender los componentes base, el uso de Material UI y Formik en el frontend de NebulaE.
-    *   [Creación de un Formulario de Alta](https://www.youtube.com/watch?v=dummy_video) (2h) - Aprender a construir un formulario en React para ejecutar mutaciones de GraphQL de creación.
-    *   [Mostrando Datos con Queries de GraphQL](https://www.youtube.com/watch?v=dummy_video) (2h) - Comprender cómo crear vistas que consulten y muestren datos de la entidad.
+    *   [Entender los componentes base, el uso de Material UI, Formik, Redux y useState en el frontend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
+    *   [Implementación de RxJS para procesar CQRS y EventSourcing en el backend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
+    *   [Escenarios de uso de queries y mutaciones con MongoDB para procesamiento de datos en el backend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
 
 ### Semana 4: Comunicación Asíncrona con Eventos
 

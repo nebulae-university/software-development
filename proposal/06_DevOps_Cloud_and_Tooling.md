@@ -43,90 +43,72 @@ El plan se divide en 5 semanas, progresando desde el dominio de la línea de com
 
 ### Semana 1: Entorno y Línea de Comandos (CLI)
 
-* **Objetivo:** Configurar el entorno de desarrollo y dominar los comandos esenciales de la terminal para la manipulación de archivos, búsqueda y encadenamiento de operaciones.
-* **Lecturas y Videos:**    
-    * **Navegación y Gestión de Archivos (1.5h):**
-        * Comandos: `ls`, `cd`, `pwd`, `mkdir`, `rm`, `cp`, `mv`, `chmod`.
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Comandos Bash – Wikipedia](https://es.wikipedia.org/wiki/Comandos_Bash)
-            * Inglés: [GNU Coreutils – ls, cd, etc.](https://www.gnu.org/software/coreutils/)
-        * **Videos verificados:**
-            * Español: [Comandos LINUX Básicos Desde Cero – DeciLearn](https://www.youtube.com/watch?v=_KCc-tvpPRM) (2022)
-            * Inglés: [Linux Command Line for Beginners – freeCodeCamp](https://www.youtube.com/watch?v=sWbUDq4S6Y8) (2021)
-    * **Manipulación y Búsqueda de Texto (2.5h):**
-        * Comandos: `cat`, `less`, `head`, `tail`, `grep`, `find`.
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Comandos Bash – Wikipedia](https://es.wikipedia.org/wiki/Comandos_Bash)
-            * Inglés: [grep – man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
-        * **Videos verificados:**
-            * Español: [Domina grep y find en Linux](https://www.youtube.com/watch?v=UaV5y1wsSqk) (2021)
-            * Inglés: [Linux Text Search – grep & find](https://www.youtube.com/watch?v=VGgTmxXp7xQ) (2022)
-    * **Encadenamiento de Comandos y Redirección (2h):**
-        * Pipes (`|`), Redirección (`>`, `>>`), Operadores de control (`;`, `&&`).
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Guía de Redirección y Pipes en Linux – Tecmint](https://www.tecmint.com/use-linux-pipes-to-connect-commands/)
-            * Inglés: [Bash Reference Manual – Pipelines](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html)
-        * **Videos verificados:**
-            * Español: [Pipes y Redirecciones en Linux](https://www.youtube.com/watch?v=Hsno6279tik) 
-            * Inglés: [Linux Pipes and Redirection](https://www.youtube.com/watch?v=mV_8GbzwZMM) (2022)
-    * **Prerrequisitos de Instalación herramientas de desarrollo (2h):**
-        * **Git:**
-            * Español: [Instalación de Git – git-scm.com](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
-            * Inglés: [Installing Git – git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-        * **nvm:** 
-            * Inglés: [nvm-sh/nvm – GitHub](https://github.com/nvm-sh/nvm#installing-and-updating)
-        * **Node.js y Paquetes Globales:**
-            * Español: [Node.js en Español](https://nodejs.org/es)
-            * Inglés: [Node.js Official](https://nodejs.org/en)
+*   **Objetivo:** Configurar un entorno de desarrollo profesional y dominar la línea de comandos. El desarrollador instalará y configurará las herramientas esenciales (Git, nvm, Node.js) y obtendrá fluidez en la navegación, manipulación de archivos, búsqueda de texto (`grep`, `find`) y el encadenamiento de operaciones mediante pipes y redirección. Se introducirán los fundamentos de la automatización con scripts de Bash.
+*   **Recursos y Prácticas:**
+    *   **Git:**
+        *   [Instalación de Git (Español)](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
+        *   [Installing Git (Inglés)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    *   **nvm:** 
+        *   [nvm-sh/nvm – GitHub](https://github.com/nvm-sh/nvm#installing-and-updating)
+    *   **Node.js:**
+        *   [Node.js en Español](https://nodejs.org/es)
+        *   [Node.js Official](https://nodejs.org/en)
+    *   **Comandos Bash:**
+        *   [Comandos Bash – Wikipedia (Español)](https://es.wikipedia.org/wiki/Comandos_Bash)
+        *   [GNU Coreutils – ls, cd, etc. (Inglés)](https://www.gnu.org/software/coreutils/)
+    *   **Pipes y Redirección:**
+        *   [Guía de Redirección y Pipes en Linux – Tecmint (Español)](https://www.tecmint.com/use-linux-pipes-to-connect-commands/)
+        *   [Bash Reference Manual – Pipelines (Inglés)](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html)
+    *   **Videos:**
+        *   [Configuración básica del entorno de desarrollo](https://youtu.be/RzYQwp_6UKs)
+        *   [Comandos LINUX Básicos Desde Cero – DeciLearn (Español)](https://www.youtube.com/watch?v=_KCc-tvpPRM) (2022)
+        *   [Linux Command Line for Beginners – freeCodeCamp (Inglés)](https://www.youtube.com/watch?v=sWbUDq4S6Y8) (2021)
+        *   [Comando find](https://www.youtube.com/watch?v=Au9OM5-RgIM)
+        *   [Comando GREP](https://www.youtube.com/watch?v=MfDVUemyQOo)
+        *   [Linux Text Search – grep & find (Inglés)](https://www.youtube.com/watch?v=VGgTmxXp7xQ) (2022)
+        *   [Pipes y Redirecciones en Linux (Español)](https://www.youtube.com/watch?v=Hsno6279tik)
+        *   [Linux Pipes and Redirection (Inglés)](https://www.youtube.com/watch?v=mV_8GbzwZMM) (2022)
+        *   [Bash Scripting Crash Course (Inglés)](https://www.youtube.com/watch?v=tK9Oc6AEnR4) (2022)
 
 ---
 
 ### Semana 2: Docker y Docker Compose
 
-* **Objetivo:** Dominar la creación y gestión de contenedores con Docker y orquestar aplicaciones multi-servicio con Docker Compose.
-* **Lecturas y Videos:**
-    * **Docker: Fundamentos y Gestión de Contenedores (2.5h):**
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Introducción a Docker – Docker Docs ES](https://docs.docker.com/get-started/overview/?lang=es)
-            * Inglés: [Docker Overview – Docker Docs](https://docs.docker.com/get-started/overview/)
-        * **Videos verificados:**
-            * Inglés: [Docker Tutorial for Beginners – TechWorld](https://www.youtube.com/watch?v=3c-iBn73dDE) (2021)
-    * **Imágenes y Dockerfile (1.5h):**
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Dockerfile – Docker Docs ES](https://docs.docker.com/engine/reference/builder/?lang=es)
-            * Inglés: [Dockerfile reference – Docker Docs](https://docs.docker.com/engine/reference/builder/)
-    * **Docker Compose (2.5h):**
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Docker Compose – Docker Docs ES](https://docs.docker.com/compose/?lang=es)
-            * Inglés: [Docker Compose – Docker Docs](https://docs.docker.com/compose/)
-        * **Videos verificados:**
-            * Inglés: [Docker Compose in 12 Minutes](https://www.youtube.com/watch?v=HG6yIjZapSA) (2022)
-    * **Redes y Volúmenes en Compose (1.5h):**
-        * **Recursos web oficiales / técnicos:**
-            * Español: [Redes en Docker Compose](https://docs.docker.com/compose/networking/?lang=es)
-            * Inglés: [Docker Compose Networking](https://docs.docker.com/compose/networking/)
+*   **Objetivo:** Dominar los fundamentos de la contenerización con Docker. El desarrollador aprenderá a empaquetar una aplicación y sus dependencias en una imagen de Docker escribiendo un `Dockerfile`. Posteriormente, orquestará una aplicación multi-servicio (ej: aplicación + base de datos) utilizando Docker Compose, definiendo servicios, redes para la comunicación y volúmenes para la persistencia de datos.
+*   **Recursos y Prácticas:**
+    *   [Introducción a Docker – Docker Docs ES](https://docs.docker.com/get-started/overview/?lang=es)
+    *   [Referencia de Dockerfile – Docker Docs](https://docs.docker.com/engine/reference/builder/)
+    *   [Docker Compose – Docker Docs](https://docs.docker.com/compose/)
+    *   [Redes en Docker Compose](https://docs.docker.com/compose/networking/)
+    *   [Volúmenes en Docker](https://docs.docker.com/storage/volumes/)
+    *   **Videos:**
+        *   [Docker Tutorial for Beginners – TechWorld](https://www.youtube.com/watch?v=3c-iBn73dDE) (2021)
+        *   [Docker Compose in 12 Minutes](https://www.youtube.com/watch?v=HG6yIjZapSA) (2022)
 
 ---
 
-### Semana 3: Google Cloud y Fundamentos de Kubernetes (GKE)
+### Semana 3: Operación de Servicios en un Entorno Cloud Existente (GCP y GKE)
 
-* **Objetivo:** Familiarizarse con la CLI de Google Cloud (`gcloud`), configurar un proyecto y crear un clúster de Kubernetes (GKE) para interactuar con él.
-* **Lecturas y Videos:**
-    * **Google Cloud CLI (1.5h):**
-        * Inglés: [Google Cloud CLI Overview](https://cloud.google.com/sdk/docs/overview)
-    * **Gestión de Proyectos en GCP (1h):**
-        * Español: [Creación y gestión de proyectos](https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=es)
-        * Inglés: [Creating and Managing Projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
-    * **Creación de Clúster GKE (1.5h):**
-        * Español: [Crear clúster de GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster?hl=es)
-        * Inglés: [Creating a Zonal Cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster)
-    * **kubectl básico (2h):**
-        * Español: [Acceso al clúster con kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=es)
-        * Inglés: [Cluster Access for kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl)
-        * Videos:
-            * Inglés: [Kubectl Basic Commands ](https://www.youtube.com/watch?v=azuwXALfyRg) 
-    * **Port Forwarding (1h):**
-        * Inglés: [Port Forwarding in Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+*   **Objetivo:** El desarrollador aprenderá a conectarse y operar sobre un entorno de Google Cloud Platform (GCP) y Kubernetes (GKE) pre-existente. El enfoque será dominar las herramientas de línea de comandos (`gcloud`, `kubectl`) para realizar tareas esenciales de DevOps, como la inspección de logs, la ejecución de comandos remotos, el reenvío de puertos para acceso a bases de datos, y la publicación/consumo de mensajes a través de Pub/Sub.
+
+*   **Recursos y Prácticas:**
+
+    1.  **Conexión al Entorno GCP y GKE:**
+        *   **Lectura:** [Instalación y Configuración de Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
+        *   **Práctica:** Conectarse a la cuenta de NebulaE y configurar el proyecto `nebulae-lab` usando `gcloud auth login` y `gcloud config set project nebulae-lab`.
+        *   **Práctica:** Configurar `kubectl` para apuntar al clúster del proyecto con `gcloud container clusters get-credentials`.
+
+    2.  **Inspección y Depuración de Cargas de Trabajo en Kubernetes:**
+        *   **Lectura:** [Hoja de Referencia (Cheat Sheet) de `kubectl`](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+        *   **Práctica:** Usar `kubectl logs <nombre-del-pod-mongo> -f` para ver los logs en tiempo real y `kubectl exec -it <nombre-del-pod-mongo> -- /bin/bash` para obtener una shell interactiva.
+
+    3.  **Acceso a Servicios Internos del Clúster:**
+        *   **Lectura:** [Documentación Oficial de `kubectl port-forward`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward)
+        *   **Práctica:** Usar `kubectl port-forward <nombre-del-pod-mongo> 27017:27017` para conectar una herramienta de base de datos local al pod de MongoDB.
+
+    4.  **Interacción con Google Cloud Pub/Sub desde CLI:**
+        *   **Lectura:** [Guía de Inicio Rápido de `gcloud pubsub`](https://cloud.google.com/pubsub/docs/quickstart-cli)
+        *   **Práctica:** Publicar un mensaje de prueba en un tópico de `nebulae-lab` y luego consumirlo desde una suscripción.
 
 ---
 

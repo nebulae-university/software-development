@@ -37,57 +37,42 @@ El plan se divide en 5 semanas, construyendo desde los fundamentos de NodeJS y p
 
 ### Semana 1: Fundamentos de NodeJS, Asincronismo y Paradigmas
 
-* **Objetivo:** Establecer una base sólida en los patrones de asincronismo de NodeJS y en los paradigmas de programación declarativa e imperativa que guían nuestro estilo de código.
-* **Recursos y Prácticas:**
-  * [Guía de asincronismo en JS: Callbacks, Promises, Async/Await (MDN)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) _(2h)_
-    * **Video recomendado:**
-      * https://www.youtube.com/watch?v=PoRJizFvM7s
-      * https://www.youtube.com/watch?v=V_Kr9OSfDeU
-  * [Programación Imperativa vs Declarativa](https://dev.to/siddharthshyniben/explained-imperative-vs-declarative-programming-577g) _(1h)_
-    * **Video recomendado:**
-      * https://www.youtube.com/watch?v=E7Fbf7R3x6I
-  * [Práctica Declarativa: Métodos de Array (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) _(1.5h)_
-    * **Video recomendado:**
-      * https://www.youtube.com/watch?v=8MoElay6dWU
-  * [Igualdad y Falsy Values en JS (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) _(0.5h)_
-    * **Videos recomendados:**
-      * https://www.youtube.com/watch?v=jD2BuBfxRn8
-      * https://www.youtube.com/watch?v=5DVqAFhfSsE
+*   **Objetivo:** Establecer una base sólida en JavaScript moderno para el backend. El desarrollador dominará los patrones de asincronismo (Callbacks, Promises, Async/Await) y comprenderá la diferencia fundamental entre programación imperativa y declarativa, con un enfoque práctico en los métodos funcionales de Array. Se consolidarán conceptos esenciales del lenguaje como la igualdad estricta y los valores 'falsy' para escribir código robusto.
+*   **Recursos y Prácticas:**
+    *   [Guía de asincronismo en JS: Callbacks, Promises, Async/Await (MDN)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) (2h)
+    *   [Programación Imperativa vs Declarativa](https://dev.to/siddharthshyniben/explained-imperative-vs-declarative-programming-577g) (1h)
+    *   [Práctica Declarativa: Métodos de Array (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) (1.5h)
+    *   [Igualdad y Falsy Values en JS (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) (0.5h)
+    *   **Videos:**
+        *   [Programación Imperativa vs Declarativa](https://www.youtube.com/watch?v=E7Fbf7R3x6I)
+        *   [Asincronismo en JavaScript](https://www.youtube.com/watch?v=PoRJizFvM7s)
+        *   [Promises y Async/Await](https://www.youtube.com/watch?v=V_Kr9OSfDeU)
+        *   [Métodos de Array en JavaScript](https://www.youtube.com/watch?v=8MoElay6dWU)
+        *   [Igualdad en JavaScript](https://www.youtube.com/watch?v=jD2BuBfxRn8)
+        *   [Falsy Values](https://www.youtube.com/watch?v=5DVqAFhfSsE)
 
 ### Semana 2: RxJS — Fundamentos, Creación de Streams y Utilidad
 
-* **Objetivo:** Comprender los conceptos esenciales de la programación reactiva: `Observable`, `Observer`, `Subscription` y `Subject`, y aprender a crear flujos de datos desde diversas fuentes y aplicar operadores de utilidad.
-* **Recursos y Prácticas:**
-  * [Guía de Inicio Rápido de RxJS (rxjs.dev)](https://rxjs.dev/guide/overview) _(1.5h)_
-    * **Video recomendado:**
-      * https://www.youtube.com/watch?v=PhggNGsSQyg
-  * [Operadores de Creación (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/creation) _(2h)_ — Incluye `of`, `from`, `range`, `interval`, `timer`, `create`.
-    * **Videos recomendados:**
-      * https://www.youtube.com/watch?v=BgHphtY8IPE
-      * https://www.youtube.com/watch?v=xYiafdImxU8
-      * https://www.youtube.com/watch?v=Niwo4bY1CU4
-  * [Hot vs Cold Observables (Academind)](https://www.youtube.com/watch?v=zfQoleQEa4w) _(1h)_
-  * [Subjects en RxJS (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/subjects) _(1h)_
-    * **Videos recomendados:**
-      * https://www.youtube.com/watch?v=rdK92pf3abs
-      * https://www.youtube.com/watch?v=s1oV2FMK1jc
-  * [¿Por qué usar RxJS en el Backend de Node.js? (dev.to)](https://dev.to/this-is-learning/why-use-rxjs-in-node-js-backend-5eh1) _(1h)_
-    * **Video sugerido (aplicación práctica en JS):**
-      * https://www.youtube.com/watch?v=j6fY0QjLSYo
-  * [Operador `tap` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/tap) _(1h)_
-    * **Videos recomendados:**
-      * https://www.youtube.com/watch?v=2N9KA6UHjmw
-      * https://www.youtube.com/watch?v=HcwPyzD4LXQ
-  * [Operador `delay` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/delay) _(0.5h)_
-    * **Videos recomendados:**
-      * https://www.youtube.com/watch?v=fzijXza_660
-      * https://www.youtube.com/watch?v=tVVAvVd61zo
-  * [Operador `timeout` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/timeout) _(0.5h)_
-    * **Video recomendado:**
-      * https://www.youtube.com/watch?v=Xi9w4GmbidM
-  * [Operador `toPromise` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/topromise) _(0.5h)_
-    * **Video recomendado (deprecado — alternativas):**
-      * https://www.youtube.com/live/3aeK5SfWBSU
+*   **Objetivo:** Introducirse en el paradigma de la programación reactiva con RxJS. El desarrollador comprenderá los conceptos esenciales de `Observable`, `Observer` y `Subscription`, y aprenderá a crear flujos de datos desde diversas fuentes. Se analizará la diferencia crucial entre observables 'fríos' y 'calientes', el uso de `Subjects` para la comunicación de eventos, y la aplicación de operadores de utilidad para la depuración y control de flujos.
+*   **Recursos y Prácticas:**
+    *   [Guía de Inicio Rápido de RxJS (rxjs.dev)](https://rxjs.dev/guide/overview) (1.5h)
+    *   [Operadores de Creación (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/creation) (2h)
+    *   [Hot vs Cold Observables (Academind)](https://www.youtube.com/watch?v=zfQoleQEa4w) (1h)
+    *   [Subjects en RxJS (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/subjects) (1h)
+    *   [¿Por qué usar RxJS en el Backend de Node.js? (dev.to)](https://dev.to/this-is-learning/why-use-rxjs-in-node-js-backend-5eh1) (1h)
+    *   [Operador `tap` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/do) (1h)
+    *   [Operador `delay` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/delay) (0.5h)
+    *   [Operador `timeout` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/timeout) (0.5h)
+    *   [Operador `toPromise` (LearnRxJS)](https://www.learnrxjs.io/learn-rxjs/operators/utility/topromise) (0.5h)
+    *   **Videos:**
+        *   [¿Qué es RxJS?](https://www.youtube.com/watch?v=PhggNGsSQyg)
+        *   [Videos de Operadores de Creación](https://www.youtube.com/watch?v=BgHphtY8IPE), [Video 2](https://www.youtube.com/watch?v=xYiafdImxU8), [Video 3](https://www.youtube.com/watch?v=Niwo4bY1CU4)
+        *   [Subjects en RxJS](https://www.youtube.com/watch?v=rdK92pf3abs), [Video 2](https://www.youtube.com/watch?v=s1oV2FMK1jc)
+        *   [Aplicación práctica en JS](https://www.youtube.com/watch?v=j6fY0QjLSYo)
+        *   [Videos de `tap`](https://www.youtube.com/watch?v=2N9KA6UHjmw), [Video 2](https://www.youtube.com/watch?v=HcwPyzD4LXQ)
+        *   [Videos de `delay`](https://www.youtube.com/watch?v=fzijXza_660), [Video 2](https://www.youtube.com/watch?v=tVVAvVd61zo)
+        *   [Video de `timeout`](https://www.youtube.com/watch?v=Xi9w4GmbidM)
+        *   [Video de `toPromise` (alternativas)](https://www.youtube.com/live/3aeK5SfWBSU)
 
 ### Semana 3: RxJS — Filtrado y Transformación
 

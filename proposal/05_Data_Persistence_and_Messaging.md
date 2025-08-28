@@ -36,18 +36,18 @@ El plan se divide en 5 semanas, combinando dos learning paths principales de Mon
 
 ### Semana 1: Fundamentos de MongoDB para Desarrolladores
 
-*   **Objetivo:** Establecer una base sólida en el ecosistema de MongoDB, comprendiendo su arquitectura, el modelo de documentos y cómo interactuar con la base de datos desde el `mongo shell` y una aplicación Node.js.
-*   **Cursos (Node.js Developer Path):**
+*   **Objetivo:** Establecer una base sólida en el ecosistema de MongoDB. El desarrollador comprenderá la arquitectura de una base de datos orientada a documentos, aprenderá a modelar datos con estrategias de incrustación (embedding) y referencia, configurará un clúster en la nube con MongoDB Atlas y se conectará a él tanto desde la shell interactiva (`mongosh`) como desde una aplicación Node.js.
+*   **Recursos y Prácticas:**
     *   [Intro to MongoDB](https://learn.mongodb.com/courses/start-here-introduction-to-mongodb) (1.25h)
-    *   [Getting Started with MongoDB Atlas](https://learn.mongodb.com/courses/getting-started-with-mongodb-atlas) (1.25h)
     *   [MongoDB and the Document Model](https://learn.mongodb.com/courses/overview-of-mongodb-and-the-document-model) (1.25h)
+    *   [Getting Started with MongoDB Atlas](https://learn.mongodb.com/courses/getting-started-with-mongodb-atlas) (1.25h)
     *   [Connecting to a MongoDB Database Using the MongoDB Shell](https://learn.mongodb.com/courses/connecting-to-a-mongodb-database-using-the-mongodb-shell) (1.75h)
     *   [Connecting to MongoDB in Node.js](https://learn.mongodb.com/courses/connecting-to-mongodb-in-nodejs) (1h)
 
 ### Semana 2: Operaciones CRUD y Modelado de Datos
 
-*   **Objetivo:** Dominar las operaciones de Crear, Leer, Actualizar y Eliminar (CRUD) y aprender los principios del modelado de datos en MongoDB para diseñar schemas eficientes.
-*   **Cursos (Node.js Developer Path & Admin Path):**
+*   **Objetivo:** Dominar las operaciones de manipulación de datos (CRUD) y los principios del modelado en MongoDB. El desarrollador implementará la creación, lectura, actualización y eliminación de documentos desde el driver de Node.js. Además, aprenderá los conceptos fundamentales del modelado de datos en un esquema de documentos para diseñar colecciones eficientes y optimizadas para los patrones de lectura de la aplicación.
+*   **Recursos y Prácticas:**
     *   [MongoDB CRUD Operations: Insert and Find Documents](https://learn.mongodb.com/courses/mongodb-crud-operations-insert-and-find-documents) (1.75h)
     *   [MongoDB CRUD Operations: Replace and Delete Documents](https://learn.mongodb.com/courses/mongodb-crud-operations-replace-and-delete-documents) (1.75h)
     *   [MongoDB CRUD Operations in Node.js](https://learn.mongodb.com/courses/mongodb-crud-operations-in-nodejs) (2h)
