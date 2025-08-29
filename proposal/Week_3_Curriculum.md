@@ -111,10 +111,10 @@ Hoy te enfocarás en los siguientes módulos:
     *   [Event Sourcing Explained](https://www.youtube.com/watch?v=yFjzGRb8NOk) (15min)
 
 ### Módulo 2: Componentes Base de UI (Path 2)
-*   **Objetivo:** Entender los componentes base, el uso de Material UI, Formik, Redux y useState en el frontend de NebulaE.
+*   **Objetivo:** Entender los componentes base, el uso de Material UI, Formik, Redux useContext y useState en el frontend de NebulaE.
 *   **Descripción:** Este módulo se enfoca en comprender la arquitectura de componentes de la UI de NebulaE. Analizarás cómo se utilizan las librerías clave para construir interfaces de usuario robustas y mantenibles.
 *   **Recursos Web:**
-    *   [Entender los componentes base, el uso de Material UI, Formik, Redux y useState en el frontend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
+    *   [Entender los componentes base, el uso de Material UI, Formik, Redux y useState en el frontend de NebulaE.](https://youtu.be/wjHnL6w6GNw)
 
 ### Módulo 3: Operadores de Filtrado en RxJS (Path 3)
 *   **Objetivo:** Continuar dominando los operadores de filtrado de RxJS.
