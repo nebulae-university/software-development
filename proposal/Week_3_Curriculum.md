@@ -176,7 +176,7 @@ Hoy te enfocarás en los siguientes módulos:
 *   **Objetivo:** Implementar RxJS para procesar CQRS y EventSourcing en el backend de NebulaE.
 *   **Descripción:** Este módulo se centra en la aplicación práctica de RxJS para orquestar los flujos de CQRS y Event Sourcing en el backend. Aprenderás a utilizar los operadores de RxJS para manejar la lógica de negocio de una manera reactiva y declarativa.
 *   **Recursos Web:**
-    *   [Implementación de RxJS para procesar CQRS y EventSourcing en el backend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
+    *   [Implementación de RxJS para procesar CQRS y EventSourcing en el backend de NebulaE](https://youtu.be/YYLGPpbsheI)
 
 ### Módulo 3: Operadores de Transformación en RxJS (Path 3)
 *   **Objetivo:** Dominar los operadores de RxJS para transformar los datos que viajan a través de los flujos.
