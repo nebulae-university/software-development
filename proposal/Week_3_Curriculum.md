@@ -234,7 +234,7 @@ Hoy te enfocarás en los siguientes módulos:
 *   **Objetivo:** Escenarios de uso de queries y mutaciones con MongoDB para procesamiento de datos en el backend de NebulaE.
 *   **Descripción:** Este módulo explora cómo se utilizan las queries y mutaciones de GraphQL en combinación con MongoDB para el procesamiento avanzado de datos en el backend.
 *   **Recursos Web:**
-    *   [Escenarios de uso de queries y mutaciones con MongoDB para procesamiento de datos en el backend de NebulaE.](https://www.youtube.com/watch?v=dummy_video)
+    *   [Escenarios de uso de queries y mutaciones con MongoDB para procesamiento de datos en el backend de NebulaE.](https://youtu.be/AwQLAjEkSUg)
 
 ### Módulo 3: Operadores de Transformación en RxJS (Path 3)
 *   **Objetivo:** Continuar dominando los operadores de transformación de RxJS.
