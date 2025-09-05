@@ -86,9 +86,7 @@ El plan se divide en 5 semanas, enfocándose en la aplicación práctica de los 
 
 *   **Objetivo:** Implementar la comunicación entre microservicios mediante la publicación y consumo de eventos de dominio, aplicando los patrones correspondientes.
 *   **Recursos y Prácticas:**
-    *   [Publicación de Eventos de Dominio](https://www.youtube.com/watch?v=dummy_video) (2h) - Comprender cómo publicar eventos de dominio a través de Google Pub/Sub.
-    *   [Consumo de Eventos de Dominio](https://www.youtube.com/watch?v=dummy_video) (2h) - Comprender cómo implementar un consumidor en otro microservicio que reaccione a los eventos.
-    *   [Patrón: Consumidor Idempotente (microservices.io)](https://www.youtube.com/watch?v=dummy_videol) (1h) - Lectura teórica para entender por qué nuestros consumidores de eventos deben ser idempotentes.
+    *   [Flujo Completo de Eventos: Publicación, Consumo e Idempotencia](https://www.youtube.com/watch?v=dummy_video) (2h) - Comprender cómo publicar eventos de dominio a través del broker de mensajería, cómo implementar un consumidor en otro microservicio que reaccione a los eventos publicados teniendo en cuenta el consumidor idempotente.
 
 ### Semana 5: Configuración, Despliegue y Operación
 

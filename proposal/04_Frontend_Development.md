@@ -89,6 +89,7 @@ El plan se divide en 5 semanas, progresando desde los fundamentos de React hasta
     *   [Optimizando el Rendimiento con `React.memo` (React.dev)](https://react.dev/reference/react/memo) (1h) - Aprende a prevenir re-renders innecesarios.
     *   [Hooks de Rendimiento: `useCallback` y `useRef` (React.dev)](https://react.dev/reference/react/useCallback) (1.5h) - Para memoizar funciones y valores, y acceder a elementos del DOM.
     *   [Virtualización de Listas con `react-window` (react-window.dev)](https://react-window.dev/) (1.5h) - Para renderizar grandes cantidades de datos de forma eficiente.
+    *   [Implementación de estrategias de rendimiento en FrontEnd NebulaE](https://www.youtube.com/watch?v=dummy_video) - Demostración de uso de `React.memo`,  `useCallback`, `useRef` y `react-window` en EMI NebulaE.
 
 ### Semana 5: Experiencia de Usuario Avanzada y Persistencia Local
 
