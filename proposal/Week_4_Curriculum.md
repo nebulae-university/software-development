@@ -212,3 +212,156 @@ Hoy te enfocarás en los siguientes módulos:
 *   **Recursos Web:**
     *   [Introduction to CI/CD (GitLab Docs)](https://docs.gitlab.com/ci/) (2h)
     *   [CI/CD variables (GitLab Docs)](https://docs.gitlab.com/ee/ci/variables/)
+
+### Actividad Final Evaluativa: Sistema Reactivo de Análisis de Flotas Vehiculares
+
+#### Introducción al Ejercicio
+
+En esta evaluación final, construirás una Prueba de Concepto (PoC) para un sistema de análisis de flotas en tiempo real. El sistema se compone de dos microservicios distintos:
+
+1.  **`ms-generator`:** Simula un flujo de datos de alta frecuencia, representando vehículos que se registran en un sistema a gran velocidad.
+2.  **`ms-reporter`:** Consume este flujo de datos para procesar, agregar y presentar insights analíticos en un dashboard en tiempo real.
+
+El propósito de este ejercicio es evaluar tu capacidad para diseñar y construir una arquitectura de microservicios reactiva y desacoplada, aplicando los patrones y tecnologías clave de la Semana 4. Demostrarás tu habilidad para:
+
+*   Gestionar flujos de eventos de alta frecuencia con **RxJS**.
+*   Implementar comunicación asíncrona robusta usando **MQTT**.
+*   Construir interfaces de usuario de alto rendimiento con **React**, capaces de manejar grandes volúmenes de datos mediante **virtualización**.
+*   Diseñar patrones de agregación eficientes (vistas materializadas) para la generación de reportes.
+*   Aplicar el conjunto de patrones del framework NebulaE para una arquitectura orientada a eventos.
+
+#### Diagrama de Flujo del Sistema
+
+```mermaid
+sequenceDiagram
+    participant UI_Gen as UI (ms-generator)
+    participant BE_Gen as Backend (ms-generator)
+    participant MQTT
+    participant BE_Rep as Backend (ms-reporter)
+    participant DB_Rep as MongoDB (ms-reporter)
+    participant UI_Rep as UI (ms-reporter)
+
+    UI_Gen->>BE_Gen: 1. Comando `start-generation`
+    activate BE_Gen
+    BE_Gen-->>BE_Gen: 2. Inicia `interval(50)` para generar datos
+    loop Cada 50ms
+        BE_Gen->>MQTT: 3. Publica evento `Generated`
+        BE_Gen-->>UI_Gen: 4. Envía dato a UI (via WebSocket/SSE)
+    end
+    deactivate BE_Gen
+
+    activate BE_Rep
+    BE_Rep->>MQTT: 5. Suscrito al tópico de eventos
+    MQTT-->>BE_Rep: 6. Recibe eventos `Generated`
+    BE_Rep-->>BE_Rep: 7. Agrupa eventos con `bufferTime(1000)`
+    loop Cada 1 segundo
+        BE_Rep->>DB_Rep: 8. Procesa lote y actualiza vista materializada
+    end
+    deactivate BE_Rep
+
+    activate UI_Rep
+    UI_Rep->>BE_Rep: 9. Solicita datos del dashboard
+    BE_Rep->>DB_Rep: 10. Lee vista materializada
+    DB_Rep-->>BE_Rep: 11. Devuelve estadísticas
+    BE_Rep-->>UI_Rep: 12. Envía estadísticas al dashboard
+    deactivate UI_Rep
+```
+
+#### Diseño de la Interfaz de Usuario (UI)
+
+**`ms-generator` - Consola de Simulación:**
+
+```
++----------------------------------------------------------------------+
+| GENERADOR DE FLOTA VEHICULAR                                         |
++----------------------------------------------------------------------+
+|                                                                      |
+|  Controles:                                                          |
+|  [ Iniciar Simulación ] [ Detener Simulación ]                       |
+|                                                                      |
+|  Estado: Corriendo...   |   Vehículos Generados: 14,821               |
+|                                                                      |
++----------------------------------------------------------------------+
+| Vehículos Generados en Tiempo Real                                   |
++----------------------------------------------------------------------+
+| | Año  | Tipo    | Potencia (HP) | Vel. Máxima (km/h) | Power Source |
+|----------------------------------------------------------------------|
+| | 2023 | SUV     | 250           | 220                | Electric     |
+| | 1995 | PickUp  | 180           | 160                | Gas          |
+| | 2008 | Sedan   | 150           | 190                | Hybrid       |
+| | ... (Esta área debe ser una lista virtualizada y scrollable) ...   |
++----------------------------------------------------------------------+
+```
+
+**`ms-reporter` - Dashboard de Análisis:**
+
+```
++----------------------------------------------------------------------+
+| DASHBOARD DE ANÁLISIS DE FLOTA                                       |
++----------------------------------------------------------------------+
+| Vehículos por Tipo        | Vehículos por Década      | Potencia (HP)  |
+|---------------------------|---------------------------|----------------|
+| SUV:      10,450 (40%)    | 1980s:  1,500 (5%)        | Mínimo: 75     |
+| PickUp:    8,120 (30%)    | 1990s:  3,100 (12%)       | Máximo: 300    |
+| Sedan:     8,120 (30%)    | 2000s:  8,500 (35%)       | Promedio: 192.5|
+|                           | 2010s: 10,200 (40%)       |                |
+|                           | 2020s:  3,390 (8%)        |                |
++---------------------------+---------------------------+----------------+
+| Clasificación por Velocidad                                          |
+|----------------------------------------------------------------------|
+| Lento (<140 km/h):     5,200 (20%)                                    |
+| Normal (140-240 km/h): 15,600 (60%)                                    |
+| Rápido (>240 km/h):    5,200 (20%)                                    |
++----------------------------------------------------------------------+
+```
+
+---
+### Parte 1: Implementación de `ms-generator`
+
+**Objetivos Detallados:**
+
+1.  **Generar Microservicio:** Ejecuta `@nebulae/cli` para crear un microservicio llamado `ms-generator` con el agregado `Vehicle`.
+2.  **Backend - Lógica de Generación:**
+    *   En la capa `backend`, implementa la lógica para los comandos `start-generation` y `stop-generation`.
+    *   Utiliza RxJS para crear un flujo que emita un valor cada 50ms al iniciar. Un `interval(50)` controlado por un `takeUntil` que se active con el comando `stop-generation` es el patrón ideal.
+    *   En cada emisión del intervalo, genera un objeto `Vehicle` con valores aleatorios para sus propiedades (`type`, `powerSource`, `hp`, `year`, `topSpeed`).
+    *   Publica un evento `Generated` en el tópico MQTT `fleet/vehicles/generated` por cada vehículo creado.
+3.  **Frontend - UI de Control y Visualización:**
+    *   Implementa los botones "Iniciar" y "Detener".
+    *   Para la visualización en tiempo real, puedes usar WebSockets o Server-Sent Events (SSE) para que el backend notifique al frontend de cada nuevo vehículo.
+    *   La lista de vehículos **debe** usar el componente `FixedSizeList` de `react-window` para renderizar eficientemente miles de elementos.
+    *   Los componentes que renderizan cada fila de la lista deben estar envueltos en `React.memo` para optimizar el rendimiento.
+
+### Parte 2: Implementación de `ms-reporter`
+
+**Objetivos Detallados:**
+
+1.  **Generar Microservicio:** Ejecuta `@nebulae/cli` para crear `ms-reporter` con el agregado `VehicleStats`.
+2.  **Backend - Consumidor por Lotes (Batch):**
+    *   Configura el servicio para suscribirse al tópico MQTT `fleet/vehicles/generated`.
+    *   Crea un `Subject` de RxJS a nivel de dominio. Todos los eventos MQTT que lleguen deben ser emitidos a través de este `Subject` usando `subject.next(event)`.
+    *   En el `start del dominio, suscríbete al `Subject` y aplica el siguiente pipe: `this.events$.pipe(bufferTime(1000), filter(buffer => buffer.length > 0))`.
+    *   En la suscripción de este pipe, recibirás un array de eventos (un lote). Itera sobre este lote para calcular las nuevas estadísticas.
+    *   Actualiza el documento de estadísticas en MongoDB **una sola vez** por lote, usando operadores como `$inc` para los contadores y recalculando los promedios.
+3.  **Backend - API de Reportes:**
+    *   Define un `Query` de GraphQL (ej. `getFleetStatistics`) que lea y devuelva el documento único de la vista materializada.
+4.  **Frontend - Dashboard:**
+    *   Crea la interfaz del dashboard como se describe en el mockup.
+    *   Utiliza Apollo Client para ejecutar la query `getFleetStatistics` y poblar los componentes del dashboard con los datos recibidos.
+
+---
+### Criterios de Evaluación (Actualizados)
+
+| Criterio | Puntos | Descripción de la Evaluación |
+| :--- | :--- | :--- |
+| **Parte 1: `ms-generator`** | **(40 Puntos)** | |
+| Backend y Publicación de Eventos | 15 | La lógica de generación respeta el intervalo de 50ms, se controla con Start/Stop y publica correctamente los eventos en MQTT. |
+| Rendimiento del Frontend | 15 | Se implementa correctamente una **lista virtualizada** (`react-window`). Se aplican `React.memo` y `useCallback`. |
+| Lógica de Control con RxJS | 10 | Se utiliza RxJS de forma efectiva en el backend para gestionar el stream de datos (ej. `interval`, `takeUntil`). |
+| **Parte 2: `ms-reporter`** | **(50 Puntos)** | |
+| Consumidor por Lotes (Batch) con RxJS | 25 | El consumidor utiliza un `Subject` y el operador **`bufferTime(1000)`** para procesar eventos en lotes. La escritura en BD ocurre solo una vez por segundo. La lógica es idempotente. |
+| Lógica de Agregación | 15 | La lógica para calcular todas las estadísticas solicitadas (por tipo, década, velocidad y HP) es correcta y eficiente (usa operadores `$inc`). |
+| API y Dashboard | 10 | La API de GraphQL expone las estadísticas y el dashboard las consume y presenta correctamente. |
+| **Calidad General y Arquitectura** | **(10 Puntos)** | |
+| Claridad y Estructura del Código | 10 | El código en ambos microservicios es limpio, sigue las convenciones del framework y demuestra una clara aplicación de los patrones de la Semana 4. |
+| **TOTAL** | **100 Puntos** | |
