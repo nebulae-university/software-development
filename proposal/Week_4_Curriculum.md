@@ -127,7 +127,7 @@ Hoy te enfocarás en los siguientes módulos:
 ### Módulo 2: Flujo Completo de Eventos (Path 2)
 *   **Objetivo:** Implementar la comunicación entre microservicios mediante la publicación y consumo de eventos de dominio.
 *   **Recursos Web:**
-    *   [Flujo Completo de Eventos: Publicación, Consumo e Idempotencia](https://www.youtube.com/watch?v=dummy_video) (3h)
+    *   [Flujo Completo de Eventos: Publicación, Consumo e Idempotencia](https://youtu.be/alN16bk4rDw) (3h)
 
 ### Módulo 3: Virtualización de Listas (Path 4)
 *   **Objetivo:** Aprender a renderizar grandes cantidades de datos de forma eficiente.
