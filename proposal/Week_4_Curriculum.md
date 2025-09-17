@@ -167,7 +167,7 @@ Hoy te enfocarás en los siguientes módulos:
 ### Módulo 3: Implementación de estrategias de rendimiento en FrontEnd (Path 4)
 *   **Objetivo:** Ver una demostración de uso de `React.memo`, `useCallback`, `useRef` y `react-window`.
 *   **Recursos Web:**
-    *   [Implementación de estrategias de rendimiento en FrontEnd NebulaE](https://www.youtube.com/watch?v=dummy_video)
+    *   [Implementación de estrategias de rendimiento en FrontEnd NebulaE](https://youtu.be/2_1XPUOMSq8)
 
 ### Módulo 4: Logging y NATS (Path 5)
 *   **Objetivo:** Entender el logging en MongoDB y conocer el sistema de mensajería NATS.
